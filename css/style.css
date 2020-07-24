@@ -1,7 +1,6 @@
 body {
     background-color: #ffffff;
     margin: 0;
-    user-select: none;
 }
 
 .flex-grid {
@@ -90,7 +89,10 @@ body {
 .projects-grid {
     display: grid;
     background-color: #3DDC84;
-    grid-template: repeat(2, 1fr) / repeat(12, 1fr);
+    font-family: 'Source Sans Pro', sans-serif;
+    grid-template: repeat(1, minmax(10vw, 1fr)) / repeat(5, minmax(12vw, 1fr));
+    gap: 12px;
+    padding: 32px;
 }
 
 .projects-grid * {
@@ -100,15 +102,36 @@ body {
 .project-title {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 40px;
+    text-align: center;
+    margin: 0;
 }
 
 .project-header {
-    grid-row: -1/1;
-    grid-column: 1/-1;
+    background-color: #3DDC84;
+    padding-top: 20px;
 }
 
-.project1 {
-    grid-row: 3/2;
-    border-radius: 30px;
+.card {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.05);
+    cursor: pointer;
 }
