@@ -18,6 +18,8 @@ body {
 @media(max-width: 600px) {
     .flex-grid {
         display: block;
+        height: initial;
+        padding-bottom: 32px;
     }
     .short-bio {
         text-align: center !important;
@@ -132,7 +134,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     flex: 1 1 200px;
-    padding: 32px;
+    padding: 36px;
+    white-space: nowrap;
 }
 
 .card:hover {
