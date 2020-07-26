@@ -50,6 +50,8 @@ body {
 }
 
 #space_ship {
+    width: 55%;
+    height: auto;
     animation: moveUpAndDown_reverse 1s ease forwards;
 }
 
