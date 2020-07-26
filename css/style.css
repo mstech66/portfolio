@@ -89,12 +89,12 @@ body {
 }
 
 .projects-grid {
-    display: grid;
     background-color: #3DDC84;
     font-family: 'Source Sans Pro', sans-serif;
-    grid-template: repeat(1, minmax(10vw, 1fr)) / repeat(5, minmax(12vw, 1fr));
-    gap: 12px;
-    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    padding: 8px;
 }
 
 .projects-grid * {
@@ -111,6 +111,7 @@ body {
 .project-header {
     background-color: #3DDC84;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .card {
@@ -130,6 +131,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    flex: 1 1 200px;
+    padding: 32px;
 }
 
 .card:hover {
