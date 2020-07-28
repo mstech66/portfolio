@@ -142,6 +142,7 @@ body {
     flex: 1 1 200px;
     padding: 36px;
     white-space: nowrap;
+    user-select: none;
 }
 
 .card:hover {
