@@ -1,6 +1,7 @@
 :root {
     --white: #f5f5f5;
     --green: #3DDC84;
+    --violet: #0066CC;
 }
 
 body {
@@ -111,7 +112,8 @@ body {
     margin: 8px;
 }
 
-.project-title {
+.project-title,
+.card-title {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 40px;
     text-align: center;
@@ -123,6 +125,25 @@ body {
     background-color: var(--green);
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.project-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--green);
+    display: grid;
+    justify-content: center;
+}
+
+.project-footer * {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.project-footer a:hover {
+    text-decoration: underline;
 }
 
 .card {
@@ -141,8 +162,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    flex: 1 1 200px;
-    padding: 36px;
     white-space: nowrap;
     user-select: none;
     backdrop-filter: blur(20px) saturate(125%);
@@ -153,4 +172,124 @@ body {
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
     transform: translateY(-3px) scale(1.05);
     cursor: pointer;
+}
+
+.project {
+    flex: 1 1 200px;
+    padding: 36px;
+}
+
+.skill-tile {
+    background-color: white;
+    color: #424242;
+}
+
+.details-flex {
+    display: flex;
+    width: 100%;
+    padding-top: 12px;
+}
+
+.details-flex section {
+    margin: 8px;
+    border-radius: 12px;
+    backdrop-filter: blur(20px) saturate(125%);
+    background-color: #f5f5f5;
+    color: var(--white);
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+}
+
+.skills-container {
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+.skills-grid {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+    grid-gap: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1vw !important;
+}
+
+.downloads-grid {
+    flex: 1;
+    height: 600px;
+    display: grid;
+    place-items: center;
+}
+
+.card-title {
+    padding: 8px;
+    color: #616161;
+}
+
+.card>img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+.tile1 {
+    grid-row: 5/3;
+    grid-column: 8/6;
+}
+
+.tile2 {
+    grid-row: 7/5;
+    grid-column: 8/6;
+}
+
+.tile3 {
+    grid-row: 9/7;
+    grid-column: 8/6;
+}
+
+.tile4 {
+    grid-row: 11/9;
+    grid-column: 8/6;
+}
+
+.tile5 {
+    grid-row: 6/4;
+    grid-column: 10/8;
+}
+
+.tile6 {
+    grid-row: 8/6;
+    grid-column: 10/8;
+}
+
+.tile7 {
+    grid-row: 8/6;
+    grid-column: 6/4;
+}
+
+.tile8 {
+    grid-row: 10/8;
+    grid-column: 6/4;
+}
+
+.tile9 {
+    grid-row: 7/5;
+    grid-column: 12/10;
+}
+
+.tile10 {
+    grid-row: 9/7;
+    grid-column: 4/2;
+}
+
+.tile11 {
+    grid-row: 6/3;
+    grid-column: 6/3;
+}
+
+.tile12 {
+    grid-row: 11/8;
+    grid-column: 11/8;
 }
