@@ -32,6 +32,10 @@ body {
         text-align: center !important;
         margin: 12px;
     }
+    .skills-grid {
+        width: 400px !important;
+        height: 400px !important;
+    }
 }
 
 .short-bio {
@@ -185,7 +189,6 @@ body {
 }
 
 .details-flex {
-    display: flex;
     width: 100%;
     padding-top: 12px;
 }
@@ -201,8 +204,8 @@ body {
 
 .skills-container {
     flex: 1;
-    display: grid;
-    place-items: center;
+    display: flex;
+    place-content: center;
 }
 
 .skills-grid {
