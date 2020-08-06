@@ -4,6 +4,10 @@
     --violet: #0066CC;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--white);
     margin: 0;
@@ -188,6 +192,14 @@ body {
     color: #424242;
 }
 
+.skills-title {
+    grid-row: 3/1;
+    grid-column: 13/1;
+    color: #424242;
+    place-self: center;
+    font-size: 2rem;
+}
+
 .details-flex {
     width: 100%;
     padding-top: 12px;
@@ -196,10 +208,8 @@ body {
 .details-flex section {
     margin: 8px;
     border-radius: 12px;
-    backdrop-filter: blur(20px) saturate(125%);
     background-color: #f5f5f5;
     color: var(--white);
-    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
 }
 
 .skills-container {
