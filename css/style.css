@@ -36,9 +36,13 @@ body {
         text-align: center !important;
         margin: 12px;
     }
-    .skills-grid {
+    .skills-grid,
+    .downloads-grid {
         width: 400px !important;
         height: 400px !important;
+    }
+    .details-flex {
+        justify-content: center;
     }
 }
 
@@ -200,9 +204,22 @@ body {
     font-size: 2rem;
 }
 
+.downloads-title {
+    grid-row: 2/1;
+    grid-column: 7/1;
+    color: #424242;
+    place-self: center;
+    font-size: 2rem;
+}
+
 .details-flex {
+    display: flex;
     width: 100%;
     padding-top: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1vw !important;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .details-flex section {
@@ -210,10 +227,10 @@ body {
     border-radius: 12px;
     background-color: #f5f5f5;
     color: var(--white);
+    flex: 0 1 600px
 }
 
 .skills-container {
-    flex: 1;
     display: flex;
     place-content: center;
 }
@@ -223,16 +240,7 @@ body {
     height: 600px;
     display: grid;
     grid-template: repeat(12, 1fr) / repeat(12, 1fr);
-    grid-gap: 8px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1vw !important;
-}
-
-.downloads-grid {
-    flex: 1;
-    height: 600px;
-    display: grid;
-    place-items: center;
+    grid-gap: 12px;
 }
 
 .card-title {
@@ -305,4 +313,34 @@ body {
 .tile12 {
     grid-row: 11/8;
     grid-column: 11/8;
+}
+
+.downloads-grid {
+    place-items: center;
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+    gap: 12px;
+    font-size: 1rem !important;
+}
+
+.tile-ultrawide {
+    grid-row: 3/2;
+    grid-column: 5/2;
+    background: linear-gradient(150deg, #5d8dee 20%, #ad5fe6 90%);
+    backdrop-filter: blur(10px);
+}
+
+.tile-wide {
+    grid-row: 5/3;
+    grid-column: 4/2;
+    background: linear-gradient(150deg, #359cd7 10%, #7d6efb 100%);
+    backdrop-filter: blur(10px);
+}
+
+.tile-vertical {
+    grid-row: 5/3;
+    grid-column: 5/4;
+    background: linear-gradient(135deg, #f1608a 10%, #aa68d2 100%);
 }
