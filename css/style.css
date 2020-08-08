@@ -112,7 +112,6 @@ body {
 }
 
 .projects-grid {
-    background-color: var(--green);
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +121,10 @@ body {
 
 .projects-grid * {
     margin: 8px;
+}
+
+.projects {
+    background: linear-gradient(135deg, #3DDC84 10%, #0b9e43 100%);
 }
 
 .project-title,
@@ -134,7 +137,6 @@ body {
 }
 
 .project-header {
-    background-color: var(--green);
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -142,7 +144,6 @@ body {
 .project-footer {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: var(--green);
     display: grid;
     justify-content: center;
 }
