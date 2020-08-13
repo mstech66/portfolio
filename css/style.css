@@ -4,10 +4,6 @@
     --violet: #0066CC;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: var(--white);
     margin: 0;
@@ -177,7 +173,6 @@ body {
     background-repeat: no-repeat;
     white-space: nowrap;
     user-select: none;
-    backdrop-filter: blur(20px) saturate(125%);
     background-color: rgba(0, 0, 0, 0.35);
 }
 
