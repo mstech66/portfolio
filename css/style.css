@@ -5,6 +5,7 @@
     --pink-gradient: linear-gradient(135deg, #f1608a 10%, #aa68d2 100%);
     --violet-gradient: linear-gradient(150deg, #5d8dee 20%, #ad5fe6 90%);
     --blue-gradient: linear-gradient(150deg, #359cd7 10%, #7d6efb 100%);
+    --font-sans-serif: 'Source Sans Pro', sans-serif;
 }
 
 body {
@@ -50,7 +51,7 @@ body {
 }
 
 .name {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font-sans-serif);
     font-size: 46px;
     color: #313131;
     margin: 0px 0px 8px 0px;
@@ -64,7 +65,7 @@ body {
 }
 
 .bio {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font-sans-serif);
     color: rgba(0, 0, 0, 0.70);
     font-size: 20px;
     margin: 0;
@@ -111,7 +112,7 @@ body {
 }
 
 .projects-grid {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font-sans-serif);
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
@@ -128,7 +129,7 @@ body {
 
 .project-title,
 .card-title {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font-sans-serif);
     font-size: 40px;
     text-align: center;
     margin: 0;
@@ -149,7 +150,7 @@ body {
 
 .project-footer * {
     color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font-sans-serif);
     font-size: 24px;
     text-decoration: none;
 }
@@ -215,7 +216,7 @@ body {
     display: flex;
     width: 100%;
     padding-top: 12px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font-sans-serif);
     font-size: 1vw !important;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -322,6 +323,10 @@ body {
     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
     gap: 12px;
     font-size: 1rem !important;
+}
+
+.downloads-grid>div{
+    font-size: 1.4rem !important;
 }
 
 .tile-ultrawide {
