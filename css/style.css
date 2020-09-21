@@ -325,8 +325,8 @@ body {
     font-size: 1rem !important;
 }
 
-.downloads-grid>div{
-    font-size: 1.4rem !important;
+.downloads-card{
+    font-size: 1.5rem !important;
 }
 
 .tile-ultrawide {
