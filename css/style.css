@@ -6,6 +6,7 @@
     --violet-gradient: linear-gradient(150deg, #5d8dee 20%, #ad5fe6 90%);
     --blue-gradient: linear-gradient(150deg, #359cd7 10%, #7d6efb 100%);
     --font-sans-serif: 'Source Sans Pro', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;;
 }
 
 body {
@@ -44,6 +45,10 @@ body {
     .details-flex {
         justify-content: center;
     }
+
+    .downloads-card{
+        font-size: 1.3rem !important;
+    }
 }
 
 .short-bio {
@@ -51,25 +56,28 @@ body {
 }
 
 .name {
-    font-family: var(--font-sans-serif);
+    font-family: var(--font-montserrat);
     font-size: 46px;
     color: #313131;
-    margin: 0px 0px 8px 0px;
+    margin: 0px 0px 16px 0px;
 }
 
 .bitmoji {
     justify-content: right;
     text-align: center;
     grid-area: bitmoji;
-    filter: drop-shadow(1px 2px 3px black);
 }
 
 .bio {
-    font-family: var(--font-sans-serif);
+    font-family: var(--font-montserrat);
     color: rgba(0, 0, 0, 0.70);
-    font-size: 20px;
+    font-size: 1.2rem;
     margin: 0;
     word-wrap: break-word;
+}
+
+h3.bio{
+    line-height: 1.6;
 }
 
 #space_ship {
@@ -102,17 +110,18 @@ body {
 }
 
 .social-links {
-    margin: 20px 0px 0px 0px;
+    margin: 32px 0px 0px 0px;
 }
 
 .social-links a {
     text-decoration: none !important;
-    padding-right: 8px;
+    padding-right: 12px;
     color: rgba(2, 8, 20, 0.7);
 }
 
 .projects-grid {
-    font-family: var(--font-sans-serif);
+    font-family: var(--font-montserrat);
+    font-weight: bold;
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
@@ -129,8 +138,9 @@ body {
 
 .project-title,
 .card-title {
-    font-family: var(--font-sans-serif);
-    font-size: 40px;
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    font-size: 2rem;
     text-align: center;
     margin: 0;
     color: var(--white);
@@ -150,7 +160,8 @@ body {
 
 .project-footer * {
     color: white;
-    font-family: var(--font-sans-serif);
+    font-family: var(--font-montserrat);
+    font-weight: bold;
     font-size: 24px;
     text-decoration: none;
 }
@@ -164,7 +175,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--white);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     height: 100%;
@@ -216,7 +227,8 @@ body {
     display: flex;
     width: 100%;
     padding-top: 12px;
-    font-family: var(--font-sans-serif);
+    font-family: var(--font-montserrat);
+    font-weight: bold;
     font-size: 1vw !important;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -323,10 +335,6 @@ body {
     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
     gap: 12px;
     font-size: 1rem !important;
-}
-
-.downloads-card{
-    font-size: 1.5rem !important;
 }
 
 .tile-ultrawide {
