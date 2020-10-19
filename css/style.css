@@ -6,7 +6,7 @@
     --violet-gradient: linear-gradient(150deg, #5d8dee 20%, #ad5fe6 90%);
     --blue-gradient: linear-gradient(150deg, #359cd7 10%, #7d6efb 100%);
     --font-sans-serif: 'Source Sans Pro', sans-serif;
-    --font-montserrat: 'Montserrat', sans-serif;;
+    --font-montserrat: 'Montserrat', sans-serif;
 }
 
 body {
@@ -15,6 +15,49 @@ body {
     overflow-x: hidden;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+footer{
+    background-color: rgba(221, 221, 221, 0.5);
+    width: 99vw;
+    height: 50px;
+    display: grid;
+    align-items: center;
+    grid-template: repeat(1,1fr)/repeat(2,1fr);
+}
+
+#footer-name{
+    font-family: var(--font-montserrat);
+    margin: 0;
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.social-links-footer{
+    justify-self: end;
+    align-content: center;
+}
+
+body:after{
+    content: "beta";
+    position: fixed;
+    z-index: 1070;
+    width: 80px;
+    height: 25px;
+    background: #ddd;
+    top: 7px;
+    left: -20px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #222;
+    line-height: 27px;
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+  }
 
 .flex-grid {
     height: 100vh;
@@ -50,6 +93,20 @@ body {
     .downloads-card{
         font-size: 1.3rem !important;
     }
+    footer{
+        grid-template: repeat(2,1fr)/repeat(1,1fr);
+        justify-items: center !important;
+        height: 70px;
+    }
+    footer > *{
+        padding: 8px 0px;
+    }
+    .social-links-footer{
+        justify-self: center !important;
+    }
+    .social-links a:nth-last-child(1), .social-links-footer a:nth-last-child(1){
+        padding-right: 0px !important;
+    }
 }
 
 .short-bio {
@@ -58,9 +115,9 @@ body {
 
 .name {
     font-family: var(--font-montserrat);
-    font-size: 46px;
+    font-size: 2.4rem;
     color: #313131;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 12px 0px;
 }
 
 .bitmoji {
@@ -72,7 +129,7 @@ body {
 .bio {
     font-family: var(--font-montserrat);
     color: rgba(0, 0, 0, 0.70);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0;
     word-wrap: break-word;
 }
@@ -111,10 +168,10 @@ h3.bio{
 }
 
 .social-links {
-    margin: 32px 0px 0px 0px;
+    margin: 24px 0px 0px 0px;
 }
 
-.social-links a {
+.social-links a, .social-links-footer a {
     text-decoration: none !important;
     padding-right: 12px;
     color: rgba(2, 8, 20, 0.7);
@@ -141,7 +198,7 @@ h3.bio{
 .card-title {
     font-family: var(--font-montserrat);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     margin: 0;
     color: var(--white);
@@ -176,7 +233,7 @@ h3.bio{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: var(--white);
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     height: 100%;
@@ -213,7 +270,7 @@ h3.bio{
     grid-column: 13/1;
     color: #424242;
     place-self: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .downloads-title {
@@ -221,7 +278,7 @@ h3.bio{
     grid-column: 7/1;
     color: #424242;
     place-self: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .details-flex {
