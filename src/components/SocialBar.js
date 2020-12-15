@@ -6,6 +6,7 @@ import { faGithub, faInstagram, faLinkedin, faTwitter, faFacebook } from '@forta
 const useStyles = makeStyles({
     root: {
         margin: '24px 0px 0px 0px',
+        justifySelf: 'center',
         "& a": {
             textDecoration: 'none !important',
             paddingRight: '20px',
