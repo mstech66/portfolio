@@ -10,13 +10,13 @@ const useStyles = makeStyles({
         "& a": {
             textDecoration: 'none !important',
             paddingRight: '20px',
-            color: '#e0e0e0'
+            color: '#eeeeee'
         },
         "& a:nth-last-child(1)": {
             padding: '0px !important'
         },
         "& a:hover": {
-            color: '#f5f5f5'
+            color: '#ffffff'
         }
     }
 });

@@ -15,12 +15,15 @@ import mongo from '../images/logo/mongodb.png';
 import node from '../images/logo/nodejs.png'
 import pi from '../images/logo/pi.png'
 import python from '../images/logo/python.png';
+import uwp from '../images/logo/uwp.png';
+import cs from '../images/logo/cs.png';
 import { Tooltip } from '@material-ui/core';
 
 const languages = {
     android: android,
     angular: angular,
     css: css,
+    'c#': cs,
     figma: figma,
     firebase: firebase,
     flutter: flutter,
@@ -32,11 +35,12 @@ const languages = {
     node: node,
     python: python,
     react: react,
-    raspberrypi: pi
+    raspberrypi: pi,
+    UWP: uwp
 };
 
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1)
+const capitalize = function (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
 const useStyles = makeStyles({
@@ -54,8 +58,8 @@ const useStyles = makeStyles({
 function CodeLogo(props) {
     const classes = useStyles();
     return (
-        <Tooltip title={props.title.capitalize()} placement="top">
-            <img src={props.name} className={classes.codeLogo} />
+        <Tooltip title={capitalize(props.title)} placement="top">
+            <img src={props.name} className={classes.codeLogo} alt={capitalize(props.title)} />
         </Tooltip>
     )
 }
