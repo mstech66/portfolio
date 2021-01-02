@@ -4,7 +4,7 @@ import angular from '../images/logo/angular.png';
 import kotlin from '../images/logo/kotlin.png';
 import git from '../images/logo/git.png';
 import react from '../images/logo/React.png';
-import flutter from '../images/logo/flutter.png';
+import flutter from '../images/logo/flutter1.jpg';
 import mongodb from '../images/logo/mongodb.png';
 import java from '../images/logo/java.png';
 import figma from '../images/logo/figma.png';
@@ -25,6 +25,9 @@ function SkillsGrid() {
     const classes = useStyles();
 
     return <div className="skills-grid">
+        <div className="skills-title">
+            Skills
+        </div>
         <div className="card skill-tile tile1">
             <Tooltip title="JavaScript" placement="top" classes={classes}>
                 <img src={js} alt="JavaScript" />

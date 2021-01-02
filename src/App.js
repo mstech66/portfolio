@@ -59,6 +59,9 @@ class App extends Component {
               <SkillsGrid />
             </section>
             <section className="downloads-grid">
+              <div className="downloads-title">
+                Downloads
+              </div>
               <div className="card downloads-card tile-ultrawide">
                 Wallpapers
             </div>
@@ -71,7 +74,7 @@ class App extends Component {
             </section>
           </div>
           <div style={{ margin: '12px', display: 'grid', placeContent: 'center', textAlign: 'center' }}>
-            <span>Manthan Mevada</span>
+            <span style={{ fontSize: '1.5rem'}}>Manthan Mevada</span>
             <SocialBar />
           </div>
         </div>

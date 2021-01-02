@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 :root {
   --white: #f5f5f5;
@@ -18,6 +19,7 @@
 body {
   margin: 0;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: var(--font-sans-serif);
 }
 
 .App{
@@ -38,7 +40,6 @@ footer{
 }
 
 #footer-name{
-  font-family: var(--font-montserrat);
   margin: 0;
   color: #424242;
   padding-left: 8px;
@@ -50,7 +51,7 @@ footer{
   align-content: center;
 }
 
-body:after{
+/* body:after{
   content: "beta";
   position: fixed;
   z-index: 1070;
@@ -70,7 +71,7 @@ body:after{
   -ms-transform:rotate(-45deg);
   -webkit-transform:rotate(-45deg);
   transform:rotate(-45deg);
-}
+} */
 
 .flex-grid {
   height: 100vh;
@@ -131,7 +132,6 @@ body:after{
 }
 
 .name {
-  font-family: var(--font-montserrat);
   font-size: 2.4rem;
   color: #fafafa;
   margin: 0px 0px 12px 0px;
@@ -144,9 +144,8 @@ body:after{
 }
 
 .bio {
-  font-family: var(--font-montserrat);
   color: #f1f1f1;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
@@ -248,7 +247,6 @@ h3.bio{
 
 .project-footer * {
   color: white;
-  font-family: var(--font-montserrat);
   font-weight: bold;
   font-size: 24px;
   text-decoration: none;
@@ -316,27 +314,27 @@ h3.bio{
 }
 
 .skills-title {
-  grid-row: 3/1;
-  grid-column: 13/1;
-  color: #424242;
+  grid-row: 2/1;
+  grid-column: 11/3;
+  color: #f1f1f1;
   place-self: center;
   font-size: 1.8rem;
+  text-align: center;
 }
 
 .downloads-title {
   grid-row: 2/1;
-  grid-column: 7/1;
-  color: #424242;
+  grid-column: 11/3;
+  color: #f1f1f1;
   place-self: center;
+  text-align: center;
   font-size: 1.8rem;
 }
 
 .details-flex {
   display: flex;
-  width: 100%;
+  width: 98vw;
   padding-top: 12px;
-  font-family: var(--font-montserrat);
-  font-weight: bold;
   font-size: 1vw !important;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -355,11 +353,10 @@ h3.bio{
 }
 
 .skills-grid {
-  width: 600px;
-  height: 600px;
   display: grid;
   grid-template: repeat(12, 1fr) / repeat(12, 1fr);
   grid-gap: 12px;
+  max-width: fit-content;
 }
 
 .card-title {
@@ -370,8 +367,9 @@ h3.bio{
 .card>img {
   max-width: 100%;
   max-height: 100%;
-  margin: auto;
-  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
 
 .tile1 {
@@ -436,30 +434,28 @@ h3.bio{
 
 .downloads-grid {
   place-items: center;
-  width: 600px;
-  height: 600px;
   display: grid;
-  grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
   gap: 12px;
   font-size: 1rem !important;
 }
 
 .tile-ultrawide {
-  grid-row: 3/2;
-  grid-column: 5/2;
+  grid-row: 7/4;
+  grid-column: 10/4;
   background: var(--violet-gradient);
   backdrop-filter: blur(10px);
 }
 
 .tile-wide {
-  grid-row: 5/3;
-  grid-column: 4/2;
+  grid-row: 10/7;
+  grid-column: 7/4;
   background: var(--blue-gradient);
   backdrop-filter: blur(10px);
 }
 
 .tile-vertical {
-  grid-row: 5/3;
-  grid-column: 5/4;
+  grid-row: 10/7;
+  grid-column: 10/7;
   background: var(--pink-gradient);
 }
