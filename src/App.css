@@ -51,7 +51,7 @@ footer{
   align-content: center;
 }
 
-/* body:after{
+body:after{
   content: "beta";
   position: fixed;
   z-index: 1070;
@@ -71,7 +71,7 @@ footer{
   -ms-transform:rotate(-45deg);
   -webkit-transform:rotate(-45deg);
   transform:rotate(-45deg);
-} */
+}
 
 .flex-grid {
   height: 100vh;
