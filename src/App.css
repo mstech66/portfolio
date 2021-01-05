@@ -20,6 +20,7 @@ body {
   margin: 0;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   font-family: var(--font-sans-serif);
+  overflow-x: hidden;
 }
 
 .App{
@@ -86,6 +87,9 @@ body:after{
 }
 
 @media(max-width: 600px) {
+  #space_ship {
+    width: 70% !important;
+  }
   .flex-grid {
       display: block;
       height: initial;
@@ -124,6 +128,21 @@ body:after{
 
   .project{
       max-width: none !important;
+  }
+
+  .tile-ultrawide {
+    grid-row: 7/3 !important;
+    grid-column: 12/2 !important;
+  }
+  
+  .tile-wide {
+    grid-row: 12/7 !important;
+    grid-column: 7/2 !important;
+  }
+  
+  .tile-vertical {
+    grid-row: 12/7 !important;
+    grid-column: 12/7 !important;
   }
 }
 
@@ -210,7 +229,7 @@ h3.bio{
 .projects-grid > div {
   flex-shrink: 0;
   background-color: #27292D;
-  margin: 8px;
+  margin: 12px;
   flex: 1 1 150px;
   display: inline-block;
 }
