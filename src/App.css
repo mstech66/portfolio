@@ -31,6 +31,10 @@ body {
   display: none;
 }
 
+.project-dialog{
+  min-width: 400px;
+}
+
 footer{
   background-color: rgba(221, 221, 221, 0.5);
   width: 99vw;
