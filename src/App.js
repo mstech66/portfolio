@@ -6,11 +6,19 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Paper } from '@material-ui/core';
 import ProjectCard from './components/ProjectCard.js';
 import SkillsGrid from './components/SkillsGrid.js';
+import WallpaperComponent from './components/sections/WallpaperComponent.js';
+import AppsComponent from './components/sections/AppsComponent.js';
+import AssetsComponent from './components/sections/AssetsComponent.js';
+import ResumeComponent from './components/sections/ResumeComponent.js';
 
 class App extends Component {
 
   constructor(props) {
     super(props);
+    
+    this.setState({
+      open: false
+    });
 
     this.theme = createMuiTheme({
       palette: {
@@ -112,15 +120,10 @@ class App extends Component {
               <div className="downloads-title">
                 Downloads
               </div>
-              <div className="card downloads-card tile-ultrawide">
-                Wallpapers
-            </div>
-              <div className="card downloads-card tile-wide">
-                Assets
-            </div>
-              <div className="card downloads-card tile-vertical">
-                Apps
-            </div>
+              <WallpaperComponent classList="card downloads-card tile-ultrawide" />
+              <AssetsComponent classList="card downloads-card tile-wide" />
+              <AppsComponent classList="card downloads-card tile-vertical" />
+              <ResumeComponent classList="card downloads-card tile-standard resume" />
             </section>
           </div>
           <div style={{ margin: '12px', display: 'grid', placeContent: 'center', textAlign: 'center' }}>
