@@ -345,7 +345,8 @@ h3.bio{
   transition: all 500ms;
   display: block;
   max-width:300px;
-  max-height:230px;
+  min-width: 300px;
+  max-height:170px;
   width: auto;
   height: auto;
   border-radius: 12px;
