@@ -62,7 +62,7 @@ class WallpaperComponent extends Component {
         return this.state.data.map((e, i) => {
             console.log(e);
             return <a href={e} target='_blank' rel="noreferrer">
-                <img src={e} className="wallpaper" />
+                <img src={e} loading="lazy" style={{ imageRendering: 'pixelated'}} className="wallpaper" />
             </a>
         });
     }
