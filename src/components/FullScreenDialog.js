@@ -25,8 +25,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function FullScreenDialog(props) {
     const classes = useStyles();
 
-    console.log(props);
-
     return (
         <Dialog fullScreen open={props.open} onClose={props.handleClose} TransitionComponent={Transition}>
             <AppBar className={classes.appBar} style={{ background: `${props.titleColor}` }} position='sticky'>

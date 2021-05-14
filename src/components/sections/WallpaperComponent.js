@@ -23,27 +23,37 @@ class WallpaperComponent extends Component {
         super(props);
         this.state = {
             open: false,
-            data: []
+            minData: [],
+            data: [],
+            imgData: {},
         }
         this.title = "Wallpapers";
-        this.getImage();
+        // this.getImage();
     }
 
-    displayImage(imageRef) {
-        imageRef.getDownloadURL().then((url) => {
-            this.setState({ data: [...this.state.data, url] });
-        }).catch((error) => {
-            console.log(error)
-        })
+    getHighResUrl(url) {
+        return url.replace('%2Fmin', '');
     }
 
-    getImage(image) {
-        let storageRef = storage.child('Wallpapers').listAll();
-        storageRef.then((result) => {
-            result.items.forEach((ref) => {
-                this.displayImage(ref);
-            })
-        });
+    async componentDidMount() {
+        let storageRef = storage.child('Wallpapers/min').listAll();
+        let temp = [];
+        await storageRef.then(async (result) => {
+            await result.items.forEach(async (ref) => {
+                let imgObj = {};
+                await ref.getMetadata().then(async (data) => {
+                    imgObj['name'] = data['name'];
+                    const imgPath = String(data['fullPath']);
+                    await storage.child(imgPath).getDownloadURL().then((url) => {
+                        imgObj['minUrl'] = url
+                        imgObj['imgUrl'] = this.getHighResUrl(url);
+                        temp.push(imgObj);
+                    }).catch((err) => console.log(err));
+                }).catch((error) => {
+                    console.log(error);
+                });
+            });
+        }).finally(() => this.state.data = temp);
     }
 
     handleClose = () => {
@@ -59,12 +69,20 @@ class WallpaperComponent extends Component {
     }
 
     child = () => {
+        console.log(`data is ${this.state.data}`)
         return this.state.data.map((e, i) => {
             console.log(e);
-            return <a href={e} target='_blank' rel="noreferrer">
-                <img src={e} loading="lazy" style={{ imageRendering: 'pixelated'}} className="wallpaper" />
+            return <a href={e['imgUrl']} target='_blank' rel="noreferrer">
+                <img src={e['minUrl']} alt={e['name']} className="wallpaper" />
             </a>
-        });
+        })
+
+        // return this.state.minData.map((e, i) => {
+        //     console.log(e);
+        //     return <a href={e} target='_blank' rel="noreferrer">
+        //         <img src={e} className="wallpaper" />
+        //     </a>
+        // });
     }
 
     mainContent = () => {
