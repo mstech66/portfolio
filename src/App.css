@@ -524,3 +524,8 @@ h3.bio{
   grid-column: 10/4;
   background: var(--green-gradient);
 }
+
+.wipDiv #wip{
+  display: grid;
+  place-items: center;
+}

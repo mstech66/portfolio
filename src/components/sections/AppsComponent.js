@@ -62,8 +62,8 @@ class AppsComponent extends Component {
     }
 
     mainContent = () => {
-        return <div className="wallpaperGrid">
-            Work in Progress
+        return <div className="wipDiv">
+            <p id="wip" style={{}}>Work In Progress</p>
         </div>
     }
 
@@ -73,7 +73,7 @@ class AppsComponent extends Component {
                 {this.title}
             </div>
             <FullScreenDialog title={this.title} titleColor="#f1608a"
-             childComponent={this.mainContent()} open={this.state.open} handleClose={this.handleClose} />
+                childComponent={this.mainContent()} open={this.state.open} handleClose={this.handleClose} />
         </>;
     }
 }

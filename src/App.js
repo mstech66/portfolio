@@ -15,7 +15,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    
+
     this.setState({
       open: false
     });
@@ -42,8 +42,8 @@ class App extends Component {
                 enthusiastic about front-end frameworks and UI/UX to Bots and AI <br></br> Apart from tech, I love to play
                 video games,
                 read books and draw.<br></br> And,
-                  yeah I work at epam as an engineer.
-            </h3>
+                yeah I work at epam as an engineer.
+              </h3>
               <div class="social-links">
                 <SocialBar />
               </div>
@@ -109,6 +109,19 @@ class App extends Component {
                  I ended up trying C# and built a UWP App for Windows. Never doing it again!
                  In the process, get to learn some animations and with the help of CSS Tricks I created a subtle nice breathe animation in CSS 😋"
                 langUsed={['c#', 'UWP', 'css']} />
+
+              <ProjectCard title="StickerMaker"
+                url="https://github.com/mstech66/stickermaker"
+                descr="Sticker Maker App built with Flutter 💙"
+                longDescr="I got tired of all the ads with the WhatsApp Sticker Apps 😛 So decided to make my own :)
+                Designed the StickerMaker app with Figma 🧡 and Built with Flutter 💙 Just for Android 💚"
+                langUsed={['flutter', 'figma', 'android']} />
+
+              <ProjectCard title="Portfolio"
+                url="https://github.com/mstech66/stickermaker"
+                descr="Simple & Minimal Portfolio Website built with React ⚛️"
+                longDescr="Built a very simple and portfolio website with React and hosted it with Github Pages 🖤"
+                langUsed={['js', 'react', 'css', 'node']} />
 
             </div>
           </div>
