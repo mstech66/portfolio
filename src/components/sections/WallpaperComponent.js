@@ -4,15 +4,13 @@ import FullScreenDialog from '../FullScreenDialog.js';
 import firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/auth';
-import json from '../../config.json';
+import config from '../../config.json';
 
 const styles = theme => ({
     root: {
         padding: '8px'
     }
 });
-
-const config = json;
 
 firebase.initializeApp(config);
 
