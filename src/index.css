@@ -16,3 +16,21 @@ code {
   color: black;
   background: #29B6F6;
 }
+
+@keyframes blink {
+  from, to {
+    opacity: 0;
+    background-color: greenyellow;
+  }
+  50% { opacity: 1; }
+}
+
+.dot{
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 2px;
+  border-radius: 50%;
+  animation: 4s blink ease infinite;
+}
