@@ -196,6 +196,10 @@ class App extends Component {
               <span style={{ fontSize: "1.5rem" }}>Manthan Mevada</span>
               <SocialBar />
             </div>
+            <div class="waves">
+              <div class="waveOne"></div>
+              <div class="waveOne waveTwo"></div>
+            </div>
           </div>
         </Paper>
       </ThemeProvider>

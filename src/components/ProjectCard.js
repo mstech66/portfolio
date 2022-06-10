@@ -12,6 +12,7 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  Tooltip,
 } from "@material-ui/core";
 
 const styles = (theme) => ({
@@ -59,13 +60,18 @@ class ProjectCard extends Component {
               style={{ flexDirection: "row" }}
             >
               {this.props.title}{" "}
-              <div
-                className="dot"
-                style={{
-                  display:
-                    this.props.url === undefined ? "none" : "inline-flex",
-                }}
-              />
+              <Tooltip
+                title="Project is live on the internet"
+                placement="right"
+              >
+                <div
+                  className="dot"
+                  style={{
+                    display:
+                      this.props.url === undefined ? "none" : "inline-flex",
+                  }}
+                />
+              </Tooltip>
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               {this.props.descr}
