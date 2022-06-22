@@ -1,6 +1,6 @@
 import { React, Component } from 'react';
 import { withStyles } from '@material-ui/styles';
-import FullScreenDialog from './FullScreenDialog';
+import FullScreenDialog from '../FullScreenDialog';
 
 const styles = theme => ({
     root: {

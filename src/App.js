@@ -4,7 +4,7 @@ import bitmoji from "./images/bitmoji.png";
 import "./App.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { Paper } from "@material-ui/core";
-import ProjectCard from "./components/ProjectCard.js";
+import ProjectCard from "./components/cards/ProjectCard.js";
 import SkillsGrid from "./components/SkillsGrid.js";
 import WallpaperComponent from "./components/sections/WallpaperComponent.js";
 import AppsComponent from "./components/sections/AppsComponent.js";
