@@ -13,6 +13,7 @@ const styles = (theme) => ({
     backgroundColor: "#383B40",
     minWidth: "100px",
     position: "relative",
+    cursor: "pointer",
   },
   downloadBtn: {
     textDecoration: "none",
