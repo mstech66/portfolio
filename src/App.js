@@ -61,9 +61,18 @@ class App extends Component {
             <div className="projects-wrapper">
               <span className="project-title">Projects</span>
               <div className="projects-grid" ref={this.ref}>
+              <ProjectCard
+                  title="Portfolio"
+                  url="https://mstech66.github.io/"
+                  giturl="https://github.com/mstech66/stickermaker"
+                  descr="This minimal portfolio built with React ⚛️"
+                  longDescr="Built a very simple and portfolio website with React and hosted it with Github Pages"
+                  langUsed={["js", "react", "css", "node"]}
+                />
+
                 <ProjectCard
                   title="Parchi"
-                  descr="Simple Personal Finance App"
+                  descr="Personal Finance App to track your spends"
                   longDescr="While learning Flutter, I was building up a Personal Finance App for fun which ended up being liked by my friends
                 so I decided to design and develop it even better way. So, I designed the mockups in Figma and ended up creating the app
                 with Flutter. I learnt about State Management and Animations in Flutter along the way and creating an app in Flutter felt
@@ -114,8 +123,8 @@ class App extends Component {
                   title="Matcher"
                   url="http://matcher.herokuapp.com/"
                   giturl="https://github.com/mstech66/matcher"
-                  descr="Sample Combined DNA Indexing App"
-                  longDescr="Inspired by Codis, I wanted to try out comparing two different csv files
+                  descr="Simple Combined DNA Indexing System"
+                  longDescr="Inspired by CODIS (FBI), I wanted to try out comparing two different csv files
                  which contains a mixture and a sample dna data for the possible suspects and trying to match the most matched
                   possible suspect. I built the web interface in Angular 7 with a very minimal design in mind. Without the correct input,
                   you won't be able to try it but you can check my live site hosted on heroku: http://matcher.herokuapp.com/"
@@ -135,7 +144,7 @@ class App extends Component {
                 <ProjectCard
                   title="Google Server Sign-in"
                   giturl="https://github.com/mstech66/google-server-signin"
-                  descr="Serverside Google Sign-In Guide"
+                  descr="Guide to integrate Sign In with Google for websites"
                   longDescr="This is just a simple demo project where I implemented Google's Sign-In from Server-Side Application with Express and Node.
                  Thought it can be a guide to someone :)"
                   langUsed={["node", "js"]}
@@ -144,7 +153,7 @@ class App extends Component {
                 <ProjectCard
                   title="Breathe"
                   giturl="https://github.com/mstech66/breathe"
-                  descr="Simple Breathe Reminder App"
+                  descr="Simple Breathing Reminders App"
                   longDescr="As a JavaScript enthusiastic, I wanted to build a simple desktop app which will remind you to breathe
                  from time to time. Why? cause I wanted to see if it's possible or not 😁
                  After trying, ElectronJs, React Native for Windows and Flutter.
@@ -161,15 +170,6 @@ class App extends Component {
                   longDescr="I got tired of all the ads with the WhatsApp Sticker Apps 😛 So decided to make my own :)
                 Designed the StickerMaker app with Figma 🧡 and Built with Flutter 💙 Just for Android 💚"
                   langUsed={["flutter", "figma", "android"]}
-                />
-
-                <ProjectCard
-                  title="Portfolio"
-                  url="https://mstech66.github.io/"
-                  giturl="https://github.com/mstech66/stickermaker"
-                  descr="Simple & Minimal Portfolio Website built with React ⚛️"
-                  longDescr="Built a very simple and portfolio website with React and hosted it with Github Pages 🖤"
-                  langUsed={["js", "react", "css", "node"]}
                 />
               </div>
             </div>

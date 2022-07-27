@@ -238,21 +238,22 @@ h3.bio{
 
 .projects-wrapper{
   display: grid;
+  gap: 32px;
+  margin: 12px;
 }
 
 .projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 12px 0px;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:12px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
 }
 
 .projects-grid > div {
-  flex-shrink: 0;
   background-color: #27292D;
-  margin: 12px;
-  flex: 1 1 150px;
   display: inline-block;
 }
 
@@ -267,10 +268,8 @@ h3.bio{
 
 .project-title,
 .card-title {
-  padding-left: 8px;
   font-size: 2rem;
   text-align: center;
-  margin: 12px 0px;
   color: var(--white);
 }
 
@@ -544,3 +543,27 @@ h3.bio{
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   margin: 32px;
 }
+
+/* WebKit Scrollbar Styles */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(113, 112, 112);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* WebKit Scrollbar Styles End */
