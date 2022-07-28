@@ -71,7 +71,7 @@ function CodeBar(props) {
         <div className={classes.root}>
             {
                 props.values.map((value) => {
-                    return <CodeLogo name={languages[value]} title={value} />
+                    return <CodeLogo key={value} name={languages[value]} title={value} />
                 })
             }
         </div>

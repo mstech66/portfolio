@@ -64,7 +64,7 @@ class App extends Component {
               <ProjectCard
                   title="Portfolio"
                   url="https://mstech66.github.io/"
-                  giturl="https://github.com/mstech66/stickermaker"
+                  giturl="https://github.com/mstech66/mstech66.github.io"
                   descr="This minimal portfolio built with React ⚛️"
                   longDescr="Built a very simple and portfolio website with React and hosted it with Github Pages"
                   langUsed={["js", "react", "css", "node"]}

@@ -7,13 +7,9 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import CodeBar from "../CodeBar";
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  Tooltip,
-} from "@material-ui/core";
+import { IconButton, Tooltip } from "@material-ui/core";
+import LaunchTwoTone from "@material-ui/icons/LaunchTwoTone";
+import ProjectDialog from "../ProjectDialog";
 
 const styles = (theme) => ({
   root: {
@@ -50,76 +46,69 @@ class ProjectCard extends Component {
     const { classes } = this.props;
 
     return (
-      <Card className={classes.root} style={{ borderRadius: "12px" }}>
-        <CardActionArea>
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="h2"
-              style={{ flexDirection: "row" }}
-            >
-              {this.props.title}{" "}
-              <Tooltip
-                title="Project is live on the internet"
-                placement="right"
+      <>
+        <Card className={classes.root} style={{ borderRadius: "12px" }}>
+          <CardActionArea onClick={() => this.handleOpen()}>
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="h2"
+                style={{ flexDirection: "row" }}
               >
-                <div
-                  className="dot"
-                  style={{
-                    display:
-                      this.props.url === undefined ? "none" : "inline-flex",
-                  }}
-                />
-              </Tooltip>
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {this.props.descr}
-            </Typography>
-            <CodeBar values={this.props.langUsed} />
-          </CardContent>
-        </CardActionArea>
-        <CardActions style={{ padding: "16px" }}>
-          <Button
-            size="small"
-            variant="outlined"
-            color="primary"
-            disabled={this.props.giturl === undefined ? true : false}
-            onClick={() => openInNewTab(this.props.giturl)}
-          >
-            Explore Code
-          </Button>
-          <Button size="small" color="primary" onClick={this.handleOpen}>
-            Learn More
-          </Button>
-          <Dialog
-            className="project-dialog"
+                {this.props.title}{" "}
+                <Tooltip
+                  title="Project is live on the internet"
+                  placement="right"
+                >
+                  <div
+                    className="dot"
+                    style={{
+                      display:
+                        this.props.url === undefined ? "none" : "inline-flex",
+                    }}
+                  />
+                </Tooltip>
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {this.props.descr}
+              </Typography>
+              <CodeBar values={this.props.langUsed} />
+            </CardContent>
+          </CardActionArea>
+          <CardActions style={{ padding: "16px" }}>
+            <Button
+              size="small"
+              variant="outlined"
+              color="primary"
+              disabled={this.props.giturl === undefined ? true : false}
+              onClick={() => openInNewTab(this.props.giturl)}
+            >
+              Explore Code
+            </Button>
+            <Tooltip title="Launch Project" placement="right">
+              <IconButton
+                size="small"
+                style={{ padding: "6px" }}
+                disabled={this.props.url === undefined ? true : false}
+                onClick={() => openInNewTab(this.props.url)}
+              >
+                <LaunchTwoTone />
+              </IconButton>
+            </Tooltip>
+          </CardActions>
+        </Card>
+        {this.state.open && (
+          <ProjectDialog
             open={this.state.open}
-            onClose={this.handleClose}
-          >
-            <DialogTitle onClose={this.handleClose}>
-              <Typography variant="h5" component="h2">
-                {this.props.title}
-              </Typography>
-            </DialogTitle>
-            <DialogContent dividers>
-              <Typography variant="body1" color="textSecondary" component="p">
-                {this.props.longDescr}
-                <Typography variant="body2" component="p" color="textSecondary">
-                  <br />
-                  Technologies Used:
-                  <CodeBar values={this.props.langUsed} />
-                </Typography>
-              </Typography>
-            </DialogContent>
-            <DialogActions>
-              <Button autoFocus onClick={this.handleClose} color="primary">
-                Close
-              </Button>
-            </DialogActions>
-          </Dialog>
-        </CardActions>
-      </Card>
+            title={this.props.title}
+            longDescr={this.props.longDescr}
+            langUsed={this.props.langUsed}
+            handleOpen={this.handleOpen}
+            handleClose={this.handleClose}
+          />
+        )}
+      </>
     );
   }
 }

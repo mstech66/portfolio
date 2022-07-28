@@ -15,9 +15,8 @@ import { Tooltip, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
     tooltip: {
-        backgroundColor: 'white',
         color: 'rgba(0, 0, 0, 0.87)',
-        fontSize: 11,
+        fontSize: 12,
     },
 });
 
