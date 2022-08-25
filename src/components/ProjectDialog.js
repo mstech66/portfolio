@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import CodeBar from "./CodeBar.js"
+import CodeBar from "./CodeBar.js";
 import {
   Dialog,
   DialogActions,
@@ -20,36 +20,35 @@ const styles = (theme) => ({
 });
 
 class ProjectDialog extends Component {
-
   render() {
     return (
-        <Dialog
-          className="project-dialog"
-          open={this.props.open}
-          onClose={this.props.handleClose}
-          disableScrollLock
-        >
-          <DialogTitle>
-            <Typography variant="h5" component="h2">
-              {this.props.title}
+      <Dialog
+        className="project-dialog"
+        open={this.props.open}
+        onClose={this.props.handleClose}
+        disableScrollLock
+      >
+        <DialogTitle>
+          <Typography variant="h5" component="h2">
+            {this.props.title}
+          </Typography>
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography variant="body1" color="textSecondary" component="p">
+            {this.props.longDescr}
+            <Typography variant="body2" component="p" color="textSecondary">
+              <br />
+              Technologies Used:
+              <CodeBar values={this.props.langUsed} />
             </Typography>
-          </DialogTitle>
-          <DialogContent dividers>
-            <Typography variant="body1" color="textSecondary" component="p">
-              {this.props.longDescr}
-              <Typography variant="body2" component="p" color="textSecondary">
-                <br />
-                Technologies Used:
-                <CodeBar values={this.props.langUsed} />
-              </Typography>
-            </Typography>
-          </DialogContent>
-          <DialogActions>
-            <Button autoFocus onClick={this.props.handleClose} color="primary">
-              Close
-            </Button>
-          </DialogActions>
-        </Dialog>
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus onClick={this.props.handleClose} color="primary">
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
     );
   }
 }

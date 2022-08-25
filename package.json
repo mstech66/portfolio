@@ -17,6 +17,7 @@
     "gm": "^1.23.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.4.0",
     "react-scripts": "4.0.1",
     "react-spring": "^8.0.27",
     "spawn-sync": "^2.0.0",
