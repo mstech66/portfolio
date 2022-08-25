@@ -8,7 +8,10 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  IconButton,
+  Tooltip,
 } from "@material-ui/core";
+import LaunchTwoTone from "@material-ui/icons/LaunchTwoTone.js";
 
 const styles = (theme) => ({
   root: {
@@ -18,6 +21,8 @@ const styles = (theme) => ({
     height: 140,
   },
 });
+
+const openInNewTab = (url) => window.open(url, "_blank");
 
 class ProjectDialog extends Component {
   render() {
@@ -44,6 +49,25 @@ class ProjectDialog extends Component {
           </Typography>
         </DialogContent>
         <DialogActions>
+          <Button
+            size="small"
+            variant="outlined"
+            color="primary"
+            disabled={this.props.giturl === undefined ? true : false}
+            onClick={() => openInNewTab(this.props.giturl)}
+          >
+            Explore Code
+          </Button>
+          <Tooltip title="Launch Project" placement="top">
+            <IconButton
+              size="small"
+              style={{ padding: "6px" }}
+              disabled={this.props.url === undefined ? true : false}
+              onClick={() => openInNewTab(this.props.url)}
+            >
+              <LaunchTwoTone />
+            </IconButton>
+          </Tooltip>
           <Button autoFocus onClick={this.props.handleClose} color="primary">
             Close
           </Button>

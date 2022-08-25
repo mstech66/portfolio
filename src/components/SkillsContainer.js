@@ -55,6 +55,38 @@ function SkillsContainer() {
           <SiKotlin />
           <SiFirebase />
           <FaAws />
+          <FaHtml5 />
+          <FaCss3Alt />
+          <FaSass />
+          <FaJs />
+          <DiNodejs />
+          <FaReact />
+          <SiMaterialui />
+          <FaAngular />
+          <DiMongodb />
+          <FiFigma />
+          <SiFlutter />
+          <FaAndroid />
+          <FaJava />
+          <SiKotlin />
+          <SiFirebase />
+          <FaAws />
+          <FaHtml5 />
+          <FaCss3Alt />
+          <FaSass />
+          <FaJs />
+          <DiNodejs />
+          <FaReact />
+          <SiMaterialui />
+          <FaAngular />
+          <DiMongodb />
+          <FiFigma />
+          <SiFlutter />
+          <FaAndroid />
+          <FaJava />
+          <SiKotlin />
+          <SiFirebase />
+          <FaAws />
         </div>
       </div>
     </div>

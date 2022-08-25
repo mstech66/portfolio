@@ -12,15 +12,10 @@ import LaunchTwoTone from "@material-ui/icons/LaunchTwoTone";
 import ProjectDialog from "../ProjectDialog";
 
 const styles = (theme) => ({
-  root: {
-    minWidth: 328,
-  },
   media: {
     height: 140,
   },
 });
-
-const openInNewTab = (url) => window.open(url, "_blank");
 
 class ProjectCard extends Component {
   constructor(props) {
@@ -47,7 +42,7 @@ class ProjectCard extends Component {
 
     return (
       <>
-        <Card className={classes.root} style={{ borderRadius: "12px" }}>
+        <Card style={{ borderRadius: "12px" }}>
           <CardActionArea onClick={() => this.handleOpen()}>
             <CardContent>
               <Typography
@@ -76,27 +71,6 @@ class ProjectCard extends Component {
               <CodeBar values={this.props.langUsed} />
             </CardContent>
           </CardActionArea>
-          <CardActions style={{ padding: "16px" }}>
-            <Button
-              size="small"
-              variant="outlined"
-              color="primary"
-              disabled={this.props.giturl === undefined ? true : false}
-              onClick={() => openInNewTab(this.props.giturl)}
-            >
-              Explore Code
-            </Button>
-            <Tooltip title="Launch Project" placement="right">
-              <IconButton
-                size="small"
-                style={{ padding: "6px" }}
-                disabled={this.props.url === undefined ? true : false}
-                onClick={() => openInNewTab(this.props.url)}
-              >
-                <LaunchTwoTone />
-              </IconButton>
-            </Tooltip>
-          </CardActions>
         </Card>
         {this.state.open && (
           <ProjectDialog
@@ -106,6 +80,8 @@ class ProjectCard extends Component {
             langUsed={this.props.langUsed}
             handleOpen={this.handleOpen}
             handleClose={this.handleClose}
+            url={this.props.url}
+            giturl={this.props.giturl}
           />
         )}
       </>
