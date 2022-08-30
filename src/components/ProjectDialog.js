@@ -49,25 +49,29 @@ class ProjectDialog extends Component {
           </Typography>
         </DialogContent>
         <DialogActions>
-          <Button
-            size="small"
-            variant="outlined"
-            color="primary"
-            disabled={this.props.giturl === undefined ? true : false}
-            onClick={() => openInNewTab(this.props.giturl)}
-          >
-            Explore Code
-          </Button>
-          <Tooltip title="Launch Project" placement="top">
-            <IconButton
+          <div style={{ marginRight: "auto", marginLeft: "12px" }}>
+            <Button
               size="small"
-              style={{ padding: "6px" }}
-              disabled={this.props.url === undefined ? true : false}
-              onClick={() => openInNewTab(this.props.url)}
+              variant="outlined"
+              color="primary"
+              disabled={this.props.giturl === undefined ? true : false}
+              onClick={() => openInNewTab(this.props.giturl)}
             >
-              <LaunchTwoTone />
-            </IconButton>
-          </Tooltip>
+              Explore Code
+            </Button>
+            <Tooltip title="Launch Project" placement="top">
+              <Button
+                size="small"
+                variant="text"
+                color="secondary"
+                style={{ margin: "6px" }}
+                disabled={this.props.url === undefined ? true : false}
+                onClick={() => openInNewTab(this.props.url)}
+              >
+                Launch
+              </Button>
+            </Tooltip>
+          </div>
           <Button autoFocus onClick={this.props.handleClose} color="primary">
             Close
           </Button>

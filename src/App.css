@@ -56,10 +56,6 @@ body {
   display: none;
 }
 
-.project-dialog {
-  min-width: 400px;
-}
-
 footer {
   background-color: rgba(221, 221, 221, 0.5);
   width: 99vw;
@@ -351,9 +347,11 @@ h3.bio {
 }
 
 .card:hover {
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+  /* box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
     rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  transform: translateY(0px) scale(1.01);
+  transform: translateY(0px) scale(1.01); */
+  border-width: 3px;
+  border-style: solid;
   cursor: pointer;
 }
 
@@ -503,7 +501,7 @@ h3.bio {
   left: 0px;
   overflow: hidden;
   white-space: nowrap;
-  animation: bannermove 60s linear infinite;
+  animation: bannermove 120s linear infinite;
 }
 
 .skills-overflow * {
@@ -548,20 +546,21 @@ h3.bio {
   min-width: 328px;
   flex: 1 1 150px;
   height: 180px;
-  border: 3px solid white;
   font-size: 1.8rem !important;
+  transition: 50ms ease-in-out all;
+  box-sizing: border-box;
 }
 .tile-wallpaper {
-  border-color: #ad5fe6;
+  border-color: #ad5fe6 !important;
 }
 .tile-assets {
-  border-color: #359cd7;
+  border-color: #359cd7 !important;
 }
 .tile-resume {
-  border-color: #eeeeee;
+  border-color: #eeeeee !important;
 }
 .tile-apps {
-  border-color: #3ddc84;
+  border-color: #3ddc84 !important;
 }
 .section-label {
   display: flex;
@@ -585,4 +584,8 @@ h3.bio {
 }
 .title-card * {
   padding: 8px;
+}
+
+.MuiPaper-rounded {
+  border-radius: 12px !important;
 }

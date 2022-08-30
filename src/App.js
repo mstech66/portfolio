@@ -18,6 +18,9 @@ class App extends Component {
         primary: {
           main: "#fafafa",
         },
+        secondary: {
+          main: "#e0e0e0",
+        },
       },
     });
 

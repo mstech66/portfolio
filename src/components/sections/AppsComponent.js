@@ -90,7 +90,7 @@ class AppsComponent extends Component {
         </div>
         <FullScreenDialog
           title={this.title}
-          titleColor="#f1608a"
+          titleColor="#3ddc84"
           childComponent={this.mainContent()}
           open={this.state.open}
           handleClose={this.handleClose}
