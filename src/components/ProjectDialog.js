@@ -72,7 +72,7 @@ class ProjectDialog extends Component {
               </Button>
             </Tooltip>
           </div>
-          <Button autoFocus onClick={this.props.handleClose} color="primary">
+          <Button autoFocus style={{marginRight: "12px"}} onClick={this.props.handleClose} color="primary">
             Close
           </Button>
         </DialogActions>
