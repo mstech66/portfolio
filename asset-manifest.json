@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.18511a0f.chunk.css",
-    "main.js": "/static/js/main.c230a21c.chunk.js",
-    "main.js.map": "/static/js/main.c230a21c.chunk.js.map",
+    "main.js": "/static/js/main.35613e9a.chunk.js",
+    "main.js.map": "/static/js/main.35613e9a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.472079f3.js",
     "runtime-main.js.map": "/static/js/runtime-main.472079f3.js.map",
-    "static/js/2.69107e45.chunk.js": "/static/js/2.69107e45.chunk.js",
-    "static/js/2.69107e45.chunk.js.map": "/static/js/2.69107e45.chunk.js.map",
+    "static/js/2.84df2771.chunk.js": "/static/js/2.84df2771.chunk.js",
+    "static/js/2.84df2771.chunk.js.map": "/static/js/2.84df2771.chunk.js.map",
     "static/js/3.a5c8546c.chunk.js": "/static/js/3.a5c8546c.chunk.js",
     "static/js/3.a5c8546c.chunk.js.map": "/static/js/3.a5c8546c.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.18511a0f.chunk.css.map": "/static/css/main.18511a0f.chunk.css.map",
-    "static/js/2.69107e45.chunk.js.LICENSE.txt": "/static/js/2.69107e45.chunk.js.LICENSE.txt",
+    "static/js/2.84df2771.chunk.js.LICENSE.txt": "/static/js/2.84df2771.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/02.351e7c61.png",
     "static/media/React.bf0a6083.png": "/static/media/React.bf0a6083.png",
     "static/media/android.b47d3809.png": "/static/media/android.b47d3809.png",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.472079f3.js",
-    "static/js/2.69107e45.chunk.js",
+    "static/js/2.84df2771.chunk.js",
     "static/css/main.18511a0f.chunk.css",
-    "static/js/main.c230a21c.chunk.js"
+    "static/js/main.35613e9a.chunk.js"
   ]
 }
