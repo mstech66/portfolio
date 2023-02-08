@@ -71,7 +71,7 @@ class WallpaperComponent extends Component {
         return this.state.data.map((e, i) => {
             console.log(e);
             return <a href={e['imgUrl']} target='_blank' rel="noreferrer">
-                <img src={e['minUrl']} alt={e['name']} className="wallpaper" />
+                <img src={e['imgUrl']} loading="lazy" alt={e['name']} className="wallpaper" />
             </a>
         })
 

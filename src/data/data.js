@@ -81,4 +81,13 @@ export const projects = [
       "I got tired of all the ads with the WhatsApp Sticker Apps 😛 So decided to make my own :) Designed the StickerMaker app with Figma 🧡 and Built with Flutter 💙 Just for Android 💚",
     langUsed: ["flutter", "figma", "android"],
   },
+  {
+    title: "Notes App",
+    url: "https://notes-mstech66.vercel.app/",
+    giturl: "https://github.com/mstech66/notes",
+    descr: "Notes App made with React",
+    longDescr:
+      "While learning React instead of going through the tutorials and just procrastinate on actually doing something with that, I decided to actually implement what I learned and making a notes app which uses Redux and LocalStorage and Hooks seemed like a good idea :)",
+    langUsed: ["react", "js", "css"],
+  },
 ];

@@ -3,11 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
-  faInstagram,
   faLinkedin,
   faTwitter,
-  faFacebook,
-  faSnapchatGhost,
 } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles({
@@ -38,13 +35,6 @@ function SocialBar() {
       </a>
       <a
         rel="noreferrer"
-        target="_blank"
-        href="https://www.instagram.com/__m_a_n_t_h_a_n__"
-      >
-        <FontAwesomeIcon icon={faInstagram} size="lg" />
-      </a>
-      <a
-        rel="noreferrer"
         href="https://twitter.com/Manthan_Mevada"
         target="_blank"
       >
@@ -52,24 +42,10 @@ function SocialBar() {
       </a>
       <a
         rel="noreferrer"
-        href="https://www.facebook.com/manthan66"
-        target="_blank"
-      >
-        <FontAwesomeIcon icon={faFacebook} size="lg" />
-      </a>
-      <a
-        rel="noreferrer"
         href="https://www.linkedin.com/in/manthanmevada/"
         target="_blank"
       >
         <FontAwesomeIcon icon={faLinkedin} size="lg" />
-      </a>
-      <a
-        rel="noreferrer"
-        href="https://www.snapchat.com/add/manthan.mevada"
-        target="_blank"
-      >
-        <FontAwesomeIcon icon={faSnapchatGhost} size="lg" />
       </a>
     </div>
   );
