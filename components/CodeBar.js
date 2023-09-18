@@ -1,5 +1,5 @@
 import React from "react";
-import react from "../public/assets/images/logo/react.png";
+import react from "../public/assets/images/logo/React.png";
 import android from "../public/assets/images/logo/android.png";
 import angular from "../public/assets/images/logo/angular.png";
 import css from "../public/assets/images/logo/css3.png";
