@@ -3,7 +3,7 @@ import FullScreenDialog from "../FullScreenDialog.js";
 import firebase from "firebase/app";
 import "firebase/storage";
 import "firebase/auth";
-import config from "../../config.json";
+import config from "../../data/config.js";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(config);
@@ -73,11 +73,12 @@ class WallpaperComponent extends Component {
   child = () => {
     return this.state.data.map((e, i) => {
       return (
-        <a href={e["imgUrl"]} target="_blank" rel="noreferrer">
+        <a href={e["imgUrl"]} key={e["name"]} target="_blank" rel="noreferrer">
           <img
             src={e["imgUrl"]}
             loading="lazy"
             alt={e["name"]}
+            key={e["name"]}
             className="wallpaper"
           />
         </a>

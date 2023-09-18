@@ -6,7 +6,7 @@ const Intro = () => {
   return (
     <div className="flex-grid">
       <div className="bitmoji">
-        <Image src={bitmoji} id="space_ship" alt="Bitmoji" />
+        <Image src={bitmoji} id="space_ship" alt="Bitmoji" quality={50} priority={true}/>
       </div>
       <div className="short-bio">
         <h2 className="name">Manthan Mevada</h2>
