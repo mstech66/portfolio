@@ -42,7 +42,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: var(--font-sans-serif);
   overflow-x: hidden;
-  color: var(--white)
+  color: var(--white);
 }
 
 .MuiDialog-paperFullScreen {
@@ -71,11 +71,6 @@ footer {
   color: #424242;
   padding-left: 8px;
   font-weight: bold;
-}
-
-.social-links-footer {
-  justify-self: end;
-  align-content: center;
 }
 
 .flex-grid {
@@ -124,11 +119,7 @@ footer {
   footer > * {
     padding: 8px 0px;
   }
-  .social-links-footer {
-    justify-self: center !important;
-  }
-  .social-links a:nth-last-child(1),
-  .social-links-footer a:nth-last-child(1) {
+  .social-links a:nth-last-child(1) {
     padding-right: 0px !important;
   }
 
@@ -222,10 +213,10 @@ h3.bio {
   margin: 24px 0px 0px 0px;
 }
 
-.social-links a,
-.social-links-footer a {
+.social-links a {
   text-decoration: none !important;
   padding-right: 12px;
+  color: white;
 }
 
 .projects-wrapper {
@@ -646,4 +637,24 @@ body {
   100% {
     margin-left: -2396px;
   }
+}
+
+.codeLogo {
+  display: "inline-block";
+  margin-right: 12px;
+  width: auto;
+  height: 24px;
+}
+
+svg {
+  width: unset !important;
+}
+
+.fa-lg {
+  font-size: 1.7em !important;
+}
+
+.codeBarDiv {
+  margin: 24px 0px 0px 0px;
+  display: inline-flex;
 }

@@ -1,18 +1,24 @@
 import { React, Component } from "react";
-import { Paper, ThemeProvider, createTheme } from "@mui/material";
 import Intro from "@/components/Intro";
 import Downloadables from "@/components/Downloadables";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import SkillsContainer from "@/components/SkillsContainer";
+import {
+  MuiThemeProvider,
+  Paper,
+  ThemeProvider,
+  createMuiTheme,
+  createTheme,
+} from "@material-ui/core";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.theme = createTheme({
+    this.theme = createMuiTheme({
       palette: {
-        mode: 'dark',
+        type: "dark",
         primary: {
           main: "#fafafa",
         },
@@ -22,9 +28,9 @@ class App extends Component {
       },
       typography: {
         allVariants: {
-          color: '#fafafa'
-        }
-      }
+          color: "#fafafa",
+        },
+      },
     });
 
     this.state = {

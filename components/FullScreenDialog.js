@@ -1,4 +1,4 @@
-import { CloseRounded } from "@mui/icons-material";
+import { CloseRounded } from "@material-ui/icons";
 import {
   AppBar,
   Dialog,
@@ -6,8 +6,8 @@ import {
   Slide,
   Toolbar,
   Typography,
-} from "@mui/material";
-import { styled } from "@mui/system";
+} from "@material-ui/core";
+import { styled } from "@material-ui/core";
 import React from "react";
 
 const StyledAppBar = styled(AppBar)({

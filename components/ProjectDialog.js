@@ -1,6 +1,6 @@
 import { React, Component } from "react";
 import CodeBar from "./CodeBar.js";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Tooltip, Typography } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Tooltip, Typography } from "@material-ui/core";
 
 const styles = (theme) => ({
   root: {

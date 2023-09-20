@@ -7,7 +7,7 @@ import {
   CardContent,
   Tooltip,
   Typography,
-} from "@mui/material";
+} from "@material-ui/core";
 
 class ProjectCard extends Component {
   constructor(props) {

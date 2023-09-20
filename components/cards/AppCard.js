@@ -1,8 +1,7 @@
 import { React, Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { Card, CardContent, Grid, Typography } from "@mui/material";
-import { styled } from "@mui/system";
+import { CardContent, Grid, Typography, styled, Card } from "@material-ui/core";
 
 const StyledAppCard = styled(Card)({
   backgroundColor: "#383B40",

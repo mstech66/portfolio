@@ -70,7 +70,7 @@ export const projects = [
     descr: "Simple Breathing Reminders App",
     longDescr:
       "As a JavaScript enthusiastic, I wanted to build a simple desktop app which will remind you to breathe from time to time. Why? cause I wanted to see if it's possible or not 😁 After trying, ElectronJs, React Native for Windows and Flutter. I ended up trying C# and built a UWP App for Windows. Never doing it again! In the process, get to learn some animations and with the help of CSS Tricks I created a subtle nice breathe animation in CSS 😋",
-    langUsed: ["c#", "UWP", "css"],
+    langUsed: ["UWP", "css"],
   },
   {
     title: "Sticker Maker",
