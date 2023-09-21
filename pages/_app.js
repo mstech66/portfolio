@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import Head from "next/head";
 config.autoAddCss = false;
 
 export const metadata = {
@@ -9,5 +10,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="shortcut icon" href="favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }

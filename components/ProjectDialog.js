@@ -32,7 +32,7 @@ class ProjectDialog extends Component {
             {this.props.longDescr}
             <Typography variant="body2" component="p" color="textSecondary">
               <br />
-              Technologies Used:
+              Technologies Used:<br />
               <CodeBar values={this.props.langUsed} />
             </Typography>
           </Typography>
