@@ -19,6 +19,7 @@ class WallpaperComponent extends Component {
       },
     });
     const { wallpapers } = await response.json();
+    console.log(wallpapers);
     this.state.data = wallpapers;
   }
 
@@ -45,7 +46,6 @@ class WallpaperComponent extends Component {
         >
           <img
             src={e["imgUrl"]}
-            loading="lazy"
             alt={e["imgName"]}
             key={e["imgName"]}
             className="wallpaper"
