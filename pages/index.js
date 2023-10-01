@@ -5,10 +5,8 @@ import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import SkillsContainer from "@/components/SkillsContainer";
 import {
-  MuiThemeProvider,
   Paper,
   ThemeProvider,
-  createMuiTheme,
   createTheme,
 } from "@material-ui/core";
 
@@ -16,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.theme = createMuiTheme({
+    this.theme = createTheme({
       palette: {
         type: "dark",
         primary: {

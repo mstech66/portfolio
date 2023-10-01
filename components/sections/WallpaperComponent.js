@@ -1,61 +1,25 @@
 import { React, Component } from "react";
 import FullScreenDialog from "../FullScreenDialog.js";
-import firebase from "firebase/app";
-import "firebase/storage";
-import "firebase/auth";
-import config from "../../data/config.js";
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(config);
-}
-
-const storage = firebase.storage().ref();
 
 class WallpaperComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       open: false,
-      minData: [],
       data: [],
-      imgData: {},
     };
     this.title = "Wallpapers";
-    // this.getImage();
-  }
-
-  getHighResUrl(url) {
-    return url.replace("%2Fmin", "");
   }
 
   async componentDidMount() {
-    let storageRef = storage.child("Wallpapers/min").listAll();
-    let temp = [];
-    await storageRef
-      .then(async (result) => {
-        await result.items.forEach(async (ref) => {
-          let imgObj = {};
-          await ref
-            .getMetadata()
-            .then(async (data) => {
-              imgObj["name"] = data["name"];
-              const imgPath = String(data["fullPath"]);
-              await storage
-                .child(imgPath)
-                .getDownloadURL()
-                .then((url) => {
-                  imgObj["minUrl"] = url;
-                  imgObj["imgUrl"] = this.getHighResUrl(url);
-                  temp.push(imgObj);
-                })
-                .catch((err) => console.log(err));
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        });
-      })
-      .finally(() => (this.state.data = temp));
+    const response = await fetch("/api/storage?object=wallpaper", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const { wallpapers } = await response.json();
+    this.state.data = wallpapers;
   }
 
   handleClose = () => {
@@ -73,12 +37,17 @@ class WallpaperComponent extends Component {
   child = () => {
     return this.state.data.map((e, i) => {
       return (
-        <a href={e["imgUrl"]} key={e["name"]} target="_blank" rel="noreferrer">
+        <a
+          href={e["imgUrl"]}
+          key={e["imgName"]}
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             src={e["imgUrl"]}
             loading="lazy"
-            alt={e["name"]}
-            key={e["name"]}
+            alt={e["imgName"]}
+            key={e["imgName"]}
             className="wallpaper"
           />
         </a>

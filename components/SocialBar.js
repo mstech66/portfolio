@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -7,29 +6,9 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-const useStyles = makeStyles({
-  root: {
-    margin: "24px 0px 8px 0px",
-    justifySelf: "center",
-    "& a": {
-      textDecoration: "none !important",
-      paddingRight: "12px",
-      color: "#eeeeee",
-    },
-    "& a:nth-last-child(1)": {
-      padding: "0px !important",
-    },
-    "& a:hover": {
-      color: "#ffffff",
-    },
-  },
-});
-
 function SocialBar() {
-  const classes = useStyles();
-
   return (
-    <div className={`${classes.root} social-links`}>
+    <div className="social-links">
       <a rel="noreferrer" target="_blank" href="https://github.com/mstech66">
         <FontAwesomeIcon icon={faGithub} size="lg" />
       </a>

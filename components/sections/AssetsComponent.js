@@ -1,9 +1,5 @@
 import { React, Component } from "react";
 import FullScreenDialog from "../FullScreenDialog.js";
-import firebase from "firebase/app";
-import "firebase/storage";
-
-const storage = firebase.storage().ref();
 
 class AppsComponent extends Component {
   constructor(props) {
@@ -13,27 +9,6 @@ class AppsComponent extends Component {
       data: [],
     };
     this.title = "Assets";
-    // this.getImage();
-  }
-
-  displayImage(imageRef) {
-    imageRef
-      .getDownloadURL()
-      .then((url) => {
-        this.setState({ data: [...this.state.data, url] });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
-  getImage(image) {
-    let storageRef = storage.child("Apps").listAll();
-    storageRef.then((result) => {
-      result.items.forEach((ref) => {
-        this.displayImage(ref);
-      });
-    });
   }
 
   handleClose = () => {

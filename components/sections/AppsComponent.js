@@ -1,10 +1,6 @@
 import { React, Component } from "react";
 import FullScreenDialog from "../FullScreenDialog.js";
-import firebase from "firebase/app";
-import "firebase/storage";
 import AppCard from "../cards/AppCard.js";
-
-const storage = firebase.storage().ref();
 
 class AppsComponent extends Component {
   constructor(props) {
@@ -14,33 +10,17 @@ class AppsComponent extends Component {
       data: [],
     };
     this.title = "Apps";
-    this.getApps();
   }
 
-  displayApp(appRef) {
-    appRef
-      .getDownloadURL()
-      .then((url) => {
-        // this.setState({ data: [...this.state.data, url] });
-        this.setState({
-          data: [
-            { url: url, name: storage.storage.refFromURL(url).name },
-            ...this.state.data,
-          ],
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
-  getApps() {
-    let storageRef = storage.child("Apps").listAll();
-    storageRef.then((result) => {
-      result.items.forEach((ref) => {
-        this.displayApp(ref);
-      });
+  async componentDidMount() {
+    const response = await fetch("/api/storage?object=apps", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
+    const { apps } = await response.json();
+    this.state.data = apps;
   }
 
   handleClose = () => {
@@ -57,7 +37,7 @@ class AppsComponent extends Component {
 
   child = () => {
     return this.state.data.map((e, i) => {
-      return <AppCard title={e.name} url={e.url} key={e.name} />;
+      return <AppCard title={e.fileName} url={e.fileUrl} key={e.fileName} />;
     });
   };
 
@@ -71,7 +51,6 @@ class AppsComponent extends Component {
     ) : (
       <div className="appsGrid">{this.child()}</div>
     );
-    //return <div className="appsGrid">{ ? this.child() : }</div>;
   };
 
   render() {
