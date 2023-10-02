@@ -1,5 +1,7 @@
 import { React, Component } from "react";
 import FullScreenDialog from "../FullScreenDialog.js";
+import data from "../../data/config.js";
+import AssetsCard from "../cards/AssetsCard.js";
 
 class AppsComponent extends Component {
   constructor(props) {
@@ -7,8 +9,30 @@ class AppsComponent extends Component {
     this.state = {
       open: false,
       data: [],
+      figmaFiles: {
+        Parchi:
+          "https://www.figma.com/file/srCLxCzmnVITGMU2kkd7Wq/Parchi?type=design&t=B1CWDUrS6Fo61kNI-6",
+        "Sticker Maker":
+          "https://www.figma.com/file/2fpJ6aoN0QDQo17hJ95Wqk/Sticker-Maker-App?type=design&t=B1CWDUrS6Fo61kNI-6",
+      },
     };
     this.title = "Assets";
+  }
+
+  async componentDidMount() {
+    const response = await fetch(
+      `https://api.figma.com/v1/projects/109899386/files`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "X-FIGMA-TOKEN": data.figmaToken,
+        },
+      }
+    );
+    const { files } = await response.json();
+    console.log(files);
+    this.state.data = files;
   }
 
   handleClose = () => {
@@ -24,18 +48,35 @@ class AppsComponent extends Component {
   };
 
   child = () => {
+    console.log(this.state.data);
     return this.state.data.map((e, i) => {
       console.log(e);
       return (
-        <a href={e} target="_blank" rel="noreferrer">
-          <img src={e} alt="assets" className="wallpaper" />
+        <a
+          href={this.state.figmaFiles[e["name"]]}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <AssetsCard name={e["name"]} image={e["thumbnail_url"]} />
         </a>
       );
     });
   };
 
   mainContent = () => {
-    return <div className="wallpaperGrid">Work in Progress</div>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "32px",
+          margin: "32px",
+          flexWrap: "wrap",
+        }}
+      >
+        {this.child()}
+      </div>
+    );
   };
 
   render() {

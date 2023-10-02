@@ -35,6 +35,7 @@ async function getResumeUrl(res) {
 async function getWallpapers(res) {
   let storageRef = storage.child("Wallpapers");
   const temp = [];
+  var date1 = new Date();
   await storageRef.listAll().then(async (result) => {
     for (const item of result.items) {
       const imgUrl = await getFileUrl(item);
@@ -46,6 +47,8 @@ async function getWallpapers(res) {
       temp.push(img);
     }
   });
+  var date2 = new Date();
+  console.log(date2 - date1);
   res.status(200).json({ wallpapers: temp });
 }
 
