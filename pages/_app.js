@@ -14,6 +14,7 @@ export default function RootLayout({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <html lang='en'/>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <link rel="shortcut icon" href="favicon.ico" />

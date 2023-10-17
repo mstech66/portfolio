@@ -371,7 +371,7 @@ h3.bio {
 .skills-title {
   grid-row: 2/1;
   grid-column: 11/3;
-  color: #f1f1f1;
+  color: #ffffff;
   place-self: center;
   font-size: 1.3rem;
   text-align: center;
@@ -540,7 +540,7 @@ h3.bio {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: #ab2822;
   height: 120px;
   z-index: 10;
   border-radius: 0px 12px 12px 0px;
