@@ -68,7 +68,7 @@ class AppsComponent extends Component {
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           gap: "32px",
           margin: "32px",
           flexWrap: "wrap",

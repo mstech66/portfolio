@@ -1,42 +1,30 @@
-import { React, Component } from "react";
+import { React, Component, useState } from "react";
 import FullScreenDialog from "../FullScreenDialog.js";
+import useSWR from "swr";
 
-class WallpaperComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false,
-      data: [],
-    };
-    this.title = "Wallpapers";
-  }
-
-  async componentDidMount() {
-    const response = await fetch("/api/storage?object=wallpaper", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const { wallpapers } = await response.json();
-    console.log(wallpapers);
-    this.state.data = wallpapers;
-  }
-
-  handleClose = () => {
-    this.setState({
-      open: false,
-    });
+function WallpaperComponent(props) {
+  const [open, setOpen] = useState(false);
+  const title = "Wallpapers";
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const handleClose = () => {
+    setOpen(false);
   };
 
-  handleOpen = () => {
-    this.setState({
-      open: true,
-    });
+  const handleOpen = () => {
+    setOpen(true);
   };
 
-  child = () => {
-    return this.state.data.map((e, i) => {
+  const child = () => {
+    const { data, error } = useSWR(
+      "/api/storage?object=wallpaper",
+      fetcher
+    );
+    if (error) return <div>Failed to load</div>;
+    if (!data) return <div>Loading...</div>;
+
+    console.log(data.wallpapers);
+
+    return data.wallpapers.map((e, i) => {
       return (
         <a
           href={e["imgUrl"]}
@@ -55,26 +43,24 @@ class WallpaperComponent extends Component {
     });
   };
 
-  mainContent = () => {
-    return <div className="wallpaperGrid">{this.child()}</div>;
+  const mainContent = () => {
+    return <div className="wallpaperGrid">{child()}</div>;
   };
 
-  render() {
-    return (
-      <>
-        <div className={this.props.classList} onClick={() => this.handleOpen()}>
-          {this.title}
-        </div>
-        <FullScreenDialog
-          title={this.title}
-          titleColor="#ad5fe6"
-          childComponent={this.mainContent()}
-          open={this.state.open}
-          handleClose={this.handleClose}
-        />
-      </>
-    );
-  }
+  return (
+    <>
+      <div className={props.classList} onClick={() => handleOpen()}>
+        {title}
+      </div>
+      <FullScreenDialog
+        title={title}
+        titleColor="#ad5fe6"
+        childComponent={mainContent()}
+        open={open}
+        handleClose={handleClose}
+      />
+    </>
+  );
 }
 
 export default WallpaperComponent;
