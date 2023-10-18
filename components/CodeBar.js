@@ -1,7 +1,7 @@
 import React from "react";
 import { Tooltip } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SiFirebase, SiFlutter, SiKotlin, SiMongodb } from "react-icons/si";
+import { SiFirebase, SiFlutter, SiKotlin, SiMongodb, SiNextdotjs } from "react-icons/si";
 import {
   FaAndroid,
   FaAngular,
@@ -34,6 +34,7 @@ const languages = {
   react: FaReact,
   raspberrypi: FaRaspberryPi,
   UWP: FaWindows,
+  nextjs: SiNextdotjs
 };
 
 const capitalize = function (string) {

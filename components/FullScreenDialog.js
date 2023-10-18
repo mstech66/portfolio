@@ -38,11 +38,11 @@ export default function FullScreenDialog(props) {
         <Toolbar>
           <IconButton
             edge="start"
-            color="inherit"
+            color="white"
             onClick={props.handleClose}
             aria-label="close"
           >
-            <CloseRounded />
+            <CloseRounded/>
           </IconButton>
           <StyledTitle variant="h6">{props.title}</StyledTitle>
         </Toolbar>

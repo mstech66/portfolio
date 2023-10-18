@@ -1,12 +1,12 @@
 export const projects = [
   {
     title: "Portfolio",
-    url: "https://mstech66.github.io/",
-    giturl: "https://github.com/mstech66/mstech66.github.io",
-    descr: "This minimal portfolio built with React ⚛️",
+    url: "https://manthanmevada.vercel.app/",
+    giturl: "https://github.com/mstech66/portfolio",
+    descr: "This minimal portfolio built with Next",
     longDescr:
-      "Built a very simple and portfolio website with React and hosted it with Github Pages",
-    langUsed: ["js", "react", "css", "node"],
+      "Built a very simple and portfolio website with Next and hosted it with Vercel",
+    langUsed: ["nextjs", "js", "css"],
   },
   {
     title: "Parchi",
@@ -37,7 +37,7 @@ export const projects = [
     descr: "A QR Code Based Trivia Game",
     longDescr:
       "Crack Your Way is a fun trivia game with a bit complexity of QR-codes. Solve the questions and scan the QR codes to move further.",
-    langUsed: ["node", "mongo", "js", "css"],
+    langUsed: ["node", "js", "css", "mongo"],
   },
   {
     title: "Matcher",
@@ -46,7 +46,7 @@ export const projects = [
     descr: "Simple Combined DNA Indexing System",
     longDescr:
       "Inspired by CODIS (FBI), I wanted to try out comparing two different csv files which contains a mixture and a sample dna data for the possible suspects and trying to match the most matched possible suspect. I built the web interface in Angular 7 with a very minimal design in mind.",
-    langUsed: ["angular", "node", "mongo", "js", "css"],
+    langUsed: ["angular", "node", "js", "css", "mongo"],
   },
   {
     title: "InstaSaidSo!",
@@ -54,7 +54,7 @@ export const projects = [
     descr: "Quotes App for Obsessive Instagrammers",
     longDescr:
       "Inspired by Instagram's minimalistic and popular design I wanted to try it out with css but then thought about creating a quotes app which basically looks like an Instgram Clone :P Wanted to build it for desktop but electronjs didn't help me much. Ended up creating a fully functioning website with a backend quotes api with jwt authentication leveraging the data in MongoDB.",
-    langUsed: ["angular", "mongo", "js", "css"],
+    langUsed: ["angular", "js", "css", "mongo"],
   },
   {
     title: "Google Server Sign-in",
@@ -87,7 +87,7 @@ export const projects = [
     giturl: "https://github.com/mstech66/notes",
     descr: "Notes App made with React",
     longDescr:
-      "While learning React instead of going through the tutorials and just procrastinate on actually doing something with that, I decided to actually implement what I learned and making a notes app which uses Redux and LocalStorage and Hooks seemed like a good idea :)",
+      "Just a simple notes application built with react and material ui",
     langUsed: ["react", "js", "css"],
   },
 ];
