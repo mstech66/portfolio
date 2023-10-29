@@ -1,6 +1,7 @@
 import { React, Component, useState } from "react";
 import FullScreenDialog from "../FullScreenDialog.js";
 import useSWR from "swr";
+import { LinearProgress } from "@material-ui/core";
 
 function WallpaperComponent(props) {
   const [open, setOpen] = useState(false);
@@ -15,12 +16,14 @@ function WallpaperComponent(props) {
   };
 
   const child = () => {
-    const { data, error } = useSWR(
-      "/api/storage?object=wallpaper",
-      fetcher
-    );
+    const { data, error } = useSWR("/api/storage?object=wallpaper", fetcher);
     if (error) return <div>Failed to load</div>;
-    if (!data) return <div>Loading...</div>;
+    if (!data)
+      return (
+        <div style={{ width: "100%" }}>
+          <LinearProgress />
+        </div>
+      );
 
     console.log(data.wallpapers);
 
