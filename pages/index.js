@@ -4,6 +4,7 @@ import Downloadables from "@/components/Downloadables";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import SkillsContainer from "@/components/SkillsContainer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import {
   Paper,
   ThemeProvider,
