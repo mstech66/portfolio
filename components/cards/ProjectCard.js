@@ -61,6 +61,7 @@ class ProjectCard extends Component {
                 {this.props.descr}
               </Typography>
               <CodeBar values={this.props.langUsed} />
+              <img/>
             </CardContent>
           </CardActionArea>
         </Card>
