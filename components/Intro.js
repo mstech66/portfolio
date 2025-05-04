@@ -78,7 +78,7 @@ const Intro = () => {
             className="absolute right-[5%] top-[42%] w-[12%] transition-all duration-200"
           />
           <img
-            src="/assets/images/aws.png"
+            src="/assets/images/AWS.png"
             id="awsLogo"
             className="absolute right-[20%] bottom-[20%] w-[12%] transition-all duration-200"
           />
