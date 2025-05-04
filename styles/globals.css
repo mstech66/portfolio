@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --white: #f5f5f5;
@@ -17,6 +22,7 @@
   --green-gradient: linear-gradient(to right, #11998e, #38ef7d);
   --font-sans-serif: "Source Sans Pro", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
+  --font-dmserif: "DM Serif Display", serif;
 }
 
 /* General CSS Styles */
@@ -78,24 +84,55 @@ footer {
 
 .flex-grid {
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-content: center;
-}
-
-.flex-grid div {
-  flex: 1;
-  align-self: center;
+  max-width: 1000px;
+  max-height: 800px;
 }
 
 @media (max-width: 600px) {
-  #space_ship {
-    width: 70% !important;
+  .mac-div {
+    width: auto !important;
+    height: auto;
+    min-width: 380px;
   }
-  .flex-grid {
-    display: block;
-    height: initial;
-    padding-bottom: 32px;
+  .flex-grid{
+    width: unset;
+  }
+  #epamLogo{
+    @apply top-[36%];
+  }
+  #jsLogo, #tsLogo{
+    @apply top-[60%];
+  }
+  #figmaLogo{
+    @apply top-[48%];
+  }
+  #reactLogo{
+    @apply top-[35%];
+  }
+  #nodeLogo{
+    @apply top-[35%];
+  }
+  #flutterLogo{
+    @apply top-[58%];
+  }
+  #htmlLogo, #cssLogo{
+    @apply top-[45%];
+  }
+  #gitLogo {
+    @apply top-[35%];
+  }
+  #sassLogo {
+    @apply top-[48%];
+  }
+  #awsLogo {
+    @apply top-[55%];
+  }
+  #space_ship {
+    width: 70%;
   }
   .short-bio {
     text-align: center !important;
@@ -161,8 +198,8 @@ footer {
 
 .name {
   font-size: 2.4rem;
-  color: #fafafa;
-  margin: 0px 0px 12px 0px;
+  color: #c3c3c4;
+  font-family: var(--font-dmserif);
 }
 
 .bitmoji {
@@ -183,15 +220,27 @@ h3.bio {
   line-height: 1.6;
 }
 
-#space_ship {
-  width: 55%;
-  height: auto;
-  animation: moveUpAndDown_reverse 1s ease forwards;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
 }
 
-#space_ship:hover {
+.mac-div {
+  width: 100%;
+  position: relative;
+}
+
+#space_ship {
+  position: relative;
+  height: 100vh;
+}
+
+div.mac-div img:hover {
+  filter: drop-shadow(10px 10px 10px #222);
   cursor: pointer;
-  animation: moveUpAndDown 1s infinite alternate;
 }
 
 @keyframes moveUpAndDown {
@@ -605,6 +654,7 @@ body {
 
 svg {
   width: unset !important;
+  display: unset;
 }
 
 .fa-lg {
@@ -616,8 +666,7 @@ svg {
   display: inline-flex;
 }
 
-.project-dialog .MuiPaper-root{
+.project-dialog .MuiPaper-root {
   background-color: #27292d !important;
   border-radius: 12px !important;
 }
-
