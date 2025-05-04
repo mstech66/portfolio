@@ -93,6 +93,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .name{
+    position: absolute;
+    top: 28%;
+    z-index: 1;
+  }
   .mac-div {
     width: auto !important;
     height: auto;
