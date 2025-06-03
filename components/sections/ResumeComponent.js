@@ -19,11 +19,9 @@ class ResumeComponent extends Component {
 
   render() {
     return (
-      <>
-        <div className={this.props.classList} onClick={() => this.handleOpen()}>
-          {this.title}
-        </div>
-      </>
+      <div className={this.props.classList} onClick={() => this.handleOpen()}>
+        {this.title}
+      </div>
     );
   }
 }

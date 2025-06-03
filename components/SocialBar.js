@@ -5,6 +5,7 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function SocialBar() {
   return (
@@ -32,6 +33,14 @@ function SocialBar() {
         target="_blank"
       >
         <FontAwesomeIcon icon={faLinkedin} size="lg" />
+      </a>
+      <a
+        rel="noreferrer"
+        aria-label="Manthan Mevada's Email"
+        href="mailto:manthanmevada66@gmail.com"
+        target="_blank"
+      >
+        <FontAwesomeIcon icon={faEnvelope} size="lg" />
       </a>
     </div>
   );

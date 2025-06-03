@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,7 @@
   --white: #f5f5f5;
   --green: #3ddc84;
   --violet: #0066cc;
-  --card-bg: #27292d;
+  --card-bg: gray;
   --card-bg-light: #eaeaea;
   --card-primary-text: rgba(221, 221, 221, 0.9);
   --card-secondary-text: rgba(221, 221, 221, 0.67);
@@ -23,6 +23,13 @@
   --font-sans-serif: "Source Sans Pro", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --font-dmserif: "DM Serif Display", serif;
+  --bg-color: #fefcf7;
+  --text-color: gray;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2025;
+  --text-color: #fafafa;
 }
 
 /* General CSS Styles */
@@ -43,6 +50,7 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: var(--bg-color) !important;
 }
 
 body {
@@ -92,8 +100,8 @@ footer {
   max-height: 800px;
 }
 
-@media (max-width: 600px) {
-  .name{
+@media (max-width: 850px) {
+  .name {
     position: absolute;
     top: 28%;
     z-index: 1;
@@ -103,28 +111,30 @@ footer {
     height: auto;
     min-width: 380px;
   }
-  .flex-grid{
+  .flex-grid {
     width: unset;
   }
-  #epamLogo{
+  #epamLogo {
     @apply top-[36%];
   }
-  #jsLogo, #tsLogo{
+  #jsLogo,
+  #tsLogo {
     @apply top-[60%];
   }
-  #figmaLogo{
+  #figmaLogo {
     @apply top-[48%];
   }
-  #reactLogo{
+  #reactLogo {
     @apply top-[35%];
   }
-  #nodeLogo{
+  #nodeLogo {
     @apply top-[35%];
   }
-  #flutterLogo{
+  #flutterLogo {
     @apply top-[58%];
   }
-  #htmlLogo, #cssLogo{
+  #htmlLogo,
+  #cssLogo {
     @apply top-[45%];
   }
   #gitLogo {
@@ -202,9 +212,10 @@ footer {
 }
 
 .name {
-  font-size: 2.4rem;
-  color: #c3c3c4;
-  font-family: var(--font-dmserif);
+  font-size: 3rem;
+  color: var(--text-color);
+  font-family: var(--font-sans-serif);
+  font-weight: bold;
 }
 
 .bitmoji {
@@ -231,6 +242,7 @@ h3.bio {
   align-items: center;
   height: 100vh;
   justify-content: center;
+  gap: 15px;
 }
 
 .mac-div {
@@ -268,12 +280,15 @@ div.mac-div img:hover {
 
 .social-links {
   margin: 24px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
 }
 
 .social-links a {
   text-decoration: none !important;
-  padding-right: 12px;
-  color: white;
+  color: var(--text-color);
 }
 
 .projects-wrapper {
@@ -521,28 +536,31 @@ div.mac-div img:hover {
   overflow: hidden;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .skills-overflow {
   position: absolute;
-  left: 0px;
   overflow: hidden;
   white-space: nowrap;
+  display: inline-block;
+  width: max-content;
   animation: bannermove 120s linear infinite;
 }
 
-.skills-overflow * {
+.skills-overflow > * {
   margin: 18px;
   width: 50px !important;
   height: 100px;
+  color: var(--text-color);
 }
 
 @keyframes bannermove {
   0% {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
   }
 }
 
@@ -579,16 +597,16 @@ div.mac-div img:hover {
   transition: 50ms ease-in-out all;
   box-sizing: border-box;
 }
-.tile-wallpaper {
+.tile-wallpaper:hover {
   border-color: #ad5fe6 !important;
 }
-.tile-assets {
+.tile-assets:hover {
   border-color: #359cd7 !important;
 }
-.tile-resume {
+.tile-resume:hover {
   border-color: #eeeeee !important;
 }
-.tile-apps {
+.tile-apps:hover {
   border-color: #3ddc84 !important;
 }
 .section-label {
@@ -674,4 +692,14 @@ svg {
 .project-dialog .MuiPaper-root {
   background-color: #27292d !important;
   border-radius: 12px !important;
+}
+
+.MuiDialog-paperFullScreen {
+  background-color: var(--bg-color) !important;
+}
+
+.footer-name {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  font-weight: bold;
 }

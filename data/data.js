@@ -90,4 +90,12 @@ export const projects = [
       "Just a simple notes application built with react and material ui",
     langUsed: ["react", "js", "css"],
   },
+  {
+    title: "AI Powered Todo App",
+    giturl: "https://github.com/mstech66/todo",
+    descr: "Not your normal todo app",
+    longDescr:
+      "Todo list app with AI built in to help you do better tasks. It's built in NextJS with Gemini 2.5 Flash API. Deploying soon",
+    langUsed: ["nextjs", "react", "js", "tailwind", "gemini"],
+  },
 ];

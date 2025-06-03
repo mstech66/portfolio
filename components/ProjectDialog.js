@@ -1,6 +1,14 @@
 import { React, Component } from "react";
 import CodeBar from "./CodeBar.js";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Tooltip, Typography } from "@material-ui/core";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Tooltip,
+  Typography,
+} from "@material-ui/core";
 
 const styles = (theme) => ({
   root: {
@@ -32,7 +40,8 @@ class ProjectDialog extends Component {
             {this.props.longDescr}
             <Typography variant="body2" component="p" color="textSecondary">
               <br />
-              Technologies Used:<br />
+              Technologies Used:
+              <br />
               <CodeBar values={this.props.langUsed} />
             </Typography>
           </Typography>
@@ -46,7 +55,7 @@ class ProjectDialog extends Component {
               disabled={this.props.giturl === undefined ? true : false}
               onClick={() => openInNewTab(this.props.giturl)}
             >
-              Explore Code
+              View Code
             </Button>
             <Tooltip title="Launch Project" placement="top">
               <Button

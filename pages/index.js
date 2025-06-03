@@ -4,11 +4,7 @@ import Downloadables from "@/components/Downloadables";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import SkillsContainer from "@/components/SkillsContainer";
-import {
-  Paper,
-  ThemeProvider,
-  createTheme,
-} from "@material-ui/core";
+import { Paper, ThemeProvider, createTheme } from "@material-ui/core";
 
 class App extends Component {
   constructor(props) {
@@ -49,7 +45,7 @@ class App extends Component {
           style={{
             height: "100%",
             borderRadius: "0px",
-            backgroundColor: "#1f2023",
+            backgroundColor: "var(--bg-color)",
           }}
         >
           <div className="App">

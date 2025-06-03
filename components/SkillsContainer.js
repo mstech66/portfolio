@@ -24,6 +24,31 @@ import {
 } from "react-icons/si";
 
 function SkillsContainer() {
+  const Skills = () => {
+    return (
+      <>
+        <FaHtml5 />
+        <FaCss3Alt />
+        <FaSass />
+        <SiBootstrap />
+        <SiJquery />
+        <SiJavascript />
+        <SiTypescript />
+        <LiaNode />
+        <FaReact />
+        <SiNextdotjs />
+        <SiExpress />
+        <FaJava />
+        <FaAws />
+        <SiFirebase />
+        <SiFigma />
+        <FaGitAlt />
+        <SiMongodb />
+        <SiMysql />
+        <SiFlutter />
+      </>
+    );
+  };
   return (
     <div className="details-flex">
       <div className="skills-container">
@@ -31,43 +56,13 @@ function SkillsContainer() {
           <span className="section-title skills-title">Skills</span>
         </div>
         <div className="skills-overflow">
-          <FaHtml5 />
-          <FaCss3Alt />
-          <FaSass />
-          <SiBootstrap />
-          <SiJquery />
-          <SiJavascript />
-          <SiTypescript />
-          <LiaNode />
-          <FaReact />
-          <SiNextdotjs />
-          <SiExpress />
-          <FaJava />
-          <FaAws />
-          <SiFirebase />
-          <SiFigma />
-          <FaGitAlt />
-          <SiMongodb />
-          <SiMysql />
-          <FaHtml5 />
-          <FaCss3Alt />
-          <FaSass />
-          <SiBootstrap />
-          <SiJquery />
-          <SiJavascript />
-          <SiTypescript />
-          <LiaNode />
-          <FaReact />
-          <SiNextdotjs />
-          <SiExpress />
-          <FaJava />
-          <FaAws />
-          <SiFirebase />
-          <SiFigma />
-          <FaGitAlt />
-          <SiMongodb />
-          <SiMysql />
-          <SiFlutter />
+          <Skills />
+          <Skills />
+          <Skills />
+          <Skills />
+          <Skills />
+          <Skills />
+          <Skills />
         </div>
       </div>
     </div>

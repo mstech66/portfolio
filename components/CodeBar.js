@@ -1,7 +1,15 @@
 import React from "react";
 import { Tooltip } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SiFirebase, SiFlutter, SiKotlin, SiMongodb, SiNextdotjs } from "react-icons/si";
+import {
+  SiFirebase,
+  SiFlutter,
+  SiKotlin,
+  SiMongodb,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiGooglegemini
+} from "react-icons/si";
 import {
   FaAndroid,
   FaAngular,
@@ -34,7 +42,9 @@ const languages = {
   react: FaReact,
   raspberrypi: FaRaspberryPi,
   UWP: FaWindows,
-  nextjs: SiNextdotjs
+  nextjs: SiNextdotjs,
+  tailwind: SiTailwindcss,
+  gemini: SiGooglegemini
 };
 
 const capitalize = function (string) {
@@ -44,13 +54,7 @@ const capitalize = function (string) {
 function CodeLogo(props) {
   const CodeIcon = languages[props.name];
 
-  return (
-    <Tooltip title={capitalize(props.title)} placement="top">
-      <div>
-        <CodeIcon className="codeLogo" />
-      </div>
-    </Tooltip>
-  );
+  return <CodeIcon className="codeLogo" />;
 }
 
 function CodeBar(props) {

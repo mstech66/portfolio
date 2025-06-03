@@ -25,8 +25,6 @@ function WallpaperComponent(props) {
         </div>
       );
 
-    console.log(data.wallpapers);
-
     return data.wallpapers.map((e, i) => {
       return (
         <a
@@ -46,9 +44,7 @@ function WallpaperComponent(props) {
     });
   };
 
-  const mainContent = () => {
-    return <div className="wallpaperGrid">{child()}</div>;
-  };
+  const mainContent = <div className="wallpaperGrid">{child()}</div>;
 
   return (
     <>
@@ -58,7 +54,7 @@ function WallpaperComponent(props) {
       <FullScreenDialog
         title={title}
         titleColor="#ad5fe6"
-        childComponent={mainContent()}
+        childComponent={mainContent}
         open={open}
         handleClose={handleClose}
       />

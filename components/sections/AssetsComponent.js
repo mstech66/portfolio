@@ -31,7 +31,6 @@ class AppsComponent extends Component {
       }
     );
     const { files } = await response.json();
-    console.log(files);
     this.state.data = files;
   }
 
@@ -48,9 +47,7 @@ class AppsComponent extends Component {
   };
 
   child = () => {
-    console.log(this.state.data);
     return this.state.data.map((e, i) => {
-      console.log(e);
       return (
         <a
           href={this.state.figmaFiles[e["name"]]}
