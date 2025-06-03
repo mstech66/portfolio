@@ -74,6 +74,10 @@ body {
   display: none;
 }
 
+.themeBtn {
+  @apply !m-8 !absolute !right-0 !top-0;
+}
+
 footer {
   background-color: rgba(221, 221, 221, 0.5);
   width: 99vw;
@@ -101,15 +105,18 @@ footer {
 }
 
 @media (max-width: 850px) {
+  .themeBtn {
+    @apply !left-[50%] translate-x-[-50%] !p-0 !m-0 !top-[32px];
+  }
   .name {
     position: absolute;
-    top: 28%;
+    top: 25%;
     z-index: 1;
   }
   .mac-div {
     width: auto !important;
     height: auto;
-    min-width: 380px;
+    min-width: 350px;
   }
   .flex-grid {
     width: unset;

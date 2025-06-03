@@ -13,7 +13,7 @@ const Intro = () => {
   return (
     <div className="main-content">
       <IconButton
-        className="!m-8 !absolute !right-0 !top-0 !text-gray"
+        className="themeBtn"
         onClick={handleDarkToggle}
       >
         {isDarkMode ? (
