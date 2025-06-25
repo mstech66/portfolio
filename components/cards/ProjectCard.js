@@ -41,7 +41,10 @@ class ProjectCard extends Component {
                 gutterBottom
                 variant="h5"
                 component="h2"
-                style={{ flexDirection: "row" }}
+                style={{
+                  flexDirection: "row",
+                  fontFamily: "var(--font-manrope)",
+                }}
               >
                 {this.props.title}{" "}
                 <Tooltip
@@ -57,11 +60,16 @@ class ProjectCard extends Component {
                   />
                 </Tooltip>
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                component="p"
+                style={{ fontFamily: "var(--font-manrope)" }}
+              >
                 {this.props.descr}
               </Typography>
               <CodeBar values={this.props.langUsed} />
-              <img/>
+              <img />
             </CardContent>
           </CardActionArea>
         </Card>

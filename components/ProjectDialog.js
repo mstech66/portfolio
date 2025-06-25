@@ -31,14 +31,28 @@ class ProjectDialog extends Component {
         disableScrollLock
       >
         <DialogTitle>
-          <Typography variant="h5" component="h2">
+          <Typography
+            variant="h5"
+            component="h2"
+            style={{ fontFamily: "var(--font-manrope)" }}
+          >
             {this.props.title}
           </Typography>
         </DialogTitle>
         <DialogContent dividers>
-          <Typography variant="body1" color="textSecondary" component="p">
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            component="p"
+            style={{ fontFamily: "var(--font-manrope)", textAlign: "justify" }}
+          >
             {this.props.longDescr}
-            <Typography variant="body2" component="p" color="textSecondary">
+            <Typography
+              variant="body2"
+              component="p"
+              color="textSecondary"
+              style={{ fontFamily: "var(--font-manrope)" }}
+            >
               <br />
               Technologies Used:
               <br />
@@ -54,6 +68,7 @@ class ProjectDialog extends Component {
               color="primary"
               disabled={this.props.giturl === undefined ? true : false}
               onClick={() => openInNewTab(this.props.giturl)}
+              style={{ fontFamily: "var(--font-manrope)" }}
             >
               View Code
             </Button>
@@ -62,9 +77,9 @@ class ProjectDialog extends Component {
                 size="small"
                 variant="text"
                 color="secondary"
-                style={{ margin: "6px" }}
                 disabled={this.props.url === undefined ? true : false}
                 onClick={() => openInNewTab(this.props.url)}
+                style={{ fontFamily: "var(--font-manrope)", margin: "6px" }}
               >
                 Launch
               </Button>
@@ -72,7 +87,7 @@ class ProjectDialog extends Component {
           </div>
           <Button
             autoFocus
-            style={{ marginRight: "12px" }}
+            style={{ marginRight: "12px", fontFamily: "var(--font-manrope)" }}
             onClick={this.props.handleClose}
             color="primary"
           >

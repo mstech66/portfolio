@@ -11,6 +11,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ Component, pageProps }) {
+  if (typeof window !== "undefined") {
+    if (!document.documentElement.getAttribute("data-theme")) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  }
   return (
     <>
       <Head>

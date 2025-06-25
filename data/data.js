@@ -5,14 +5,14 @@ export const projects = [
     giturl: "https://github.com/mstech66/portfolio",
     descr: "This minimal portfolio built with Next",
     longDescr:
-      "Built a very simple and portfolio website with Next and hosted it with Vercel",
-    langUsed: ["nextjs", "js", "css"],
+      "Designed and deployed a streamlined personal portfolio website built with Next.js, taking advantage of Vercel's capabilities for reliable and fast hosting.",
+    langUsed: ["nextjs", "react", "js", "tailwind", "vercel"],
   },
   {
     title: "Parchi",
-    descr: "Personal Finance App to track your spends",
+    descr: "Personal Finance App to track spends",
     longDescr:
-      "While learning Flutter, I was building up a Personal Finance App for fun which ended up being liked by my friends so I decided to design and develop it even better way. So, I designed the mockups in Figma and ended up creating the app with Flutter. I learnt about State Management and Animations in Flutter along the way and creating an app in Flutter felt  so better than in Android. I haven't finished the app fully but will get it done soon :)",
+      "I designed and developed a personal finance app using Flutter and Figma, initially as a learning exercise. Positive feedback from peers motivated further enhancement, leading to deeper exploration of Flutter's state management and animation capabilities. This experience solidified my preference for Flutter in creating engaging mobile experiences",
     langUsed: ["flutter", "figma"],
   },
   {
@@ -69,7 +69,7 @@ export const projects = [
     giturl: "https://github.com/mstech66/breathe",
     descr: "Simple Breathing Reminders App",
     longDescr:
-      "As a JavaScript enthusiastic, I wanted to build a simple desktop app which will remind you to breathe from time to time. Why? cause I wanted to see if it's possible or not 😁 After trying, ElectronJs, React Native for Windows and Flutter. I ended up trying C# and built a UWP App for Windows. Never doing it again! In the process, get to learn some animations and with the help of CSS Tricks I created a subtle nice breathe animation in CSS 😋",
+      "Explored various desktop frameworks with JavaScript (Electron and React Native for Windows) before developing a functional UWP application for Windows. Incorporated custom breathing animations, demonstrating practical application development and UI design skills.",
     langUsed: ["UWP", "css"],
   },
   {
@@ -78,7 +78,7 @@ export const projects = [
     giturl: "https://github.com/mstech66/stickermaker",
     descr: "Sticker Maker App built with Flutter 💙",
     longDescr:
-      "I got tired of all the ads with the WhatsApp Sticker Apps 😛 So decided to make my own :) Designed the StickerMaker app with Figma 🧡 and Built with Flutter 💙 Just for Android 💚",
+      "Developed a Flutter-based StickerMaker app for Android to offer users an ad-free experience. The app's user interface was meticulously designed using Figma",
     langUsed: ["flutter", "figma", "android"],
   },
   {
@@ -87,8 +87,8 @@ export const projects = [
     giturl: "https://github.com/mstech66/notes",
     descr: "Notes App made with React",
     longDescr:
-      "Just a simple notes application built with react and material ui",
-    langUsed: ["react", "js", "css"],
+      "A simple notes application made with Material UI and inspired by Pinterest and Google Keep's masonry layout",
+    langUsed: ["react", "js", "css", "vercel"],
   },
   {
     title: "AI Powered Todo App",
@@ -97,5 +97,13 @@ export const projects = [
     longDescr:
       "Todo list app with AI built in to help you do better tasks. It's built in NextJS with Gemini 2.5 Flash API. Deploying soon",
     langUsed: ["nextjs", "react", "js", "tailwind", "gemini"],
+  },
+  {
+    title: "Restro App",
+    url: "https://restro-form.vercel.app/",
+    descr: "Lunch Ordering website for St. Joseph's",
+    longDescr:
+      "As part of my freelancing, I developed a website in NextJS which lets students place lunch orders safely. It uses Stripe for processing payments in Canada and as requested it uses Google Sheets API to store the information",
+    langUsed: ["nextjs", "react", "js", "tailwind", "sheets", "stripe", "vercel"],
   },
 ];

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -23,6 +24,7 @@
   --font-sans-serif: "Source Sans Pro", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   --font-dmserif: "DM Serif Display", serif;
+  --font-manrope: "Manrope", sans-serif;
   --bg-color: #fefcf7;
   --text-color: gray;
 }
@@ -74,10 +76,6 @@ body {
   display: none;
 }
 
-.themeBtn {
-  @apply !m-8 !absolute !right-0 !top-0;
-}
-
 footer {
   background-color: rgba(221, 221, 221, 0.5);
   width: 99vw;
@@ -87,71 +85,19 @@ footer {
   grid-template: repeat(1, 1fr) / repeat(2, 1fr);
 }
 
-#footer-name {
-  margin: 0;
-  color: #424242;
-  padding-left: 8px;
-  font-weight: bold;
-}
-
-.flex-grid {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  max-width: 1000px;
-  max-height: 800px;
-}
-
 @media (max-width: 850px) {
-  .themeBtn {
-    @apply !left-[50%] translate-x-[-50%] !p-0 !m-0 !top-[32px];
-  }
   .name {
-    position: absolute;
-    top: 25%;
-    z-index: 1;
+    font-size: 2rem !important;
+  }
+  .description {
+    font-size: 0.9rem !important;
   }
   .mac-div {
-    width: auto !important;
-    height: auto;
-    min-width: 350px;
+    width: 350px !important;
+    height: 250px !important;
   }
   .flex-grid {
     width: unset;
-  }
-  #epamLogo {
-    @apply top-[36%];
-  }
-  #jsLogo,
-  #tsLogo {
-    @apply top-[60%];
-  }
-  #figmaLogo {
-    @apply top-[48%];
-  }
-  #reactLogo {
-    @apply top-[35%];
-  }
-  #nodeLogo {
-    @apply top-[35%];
-  }
-  #flutterLogo {
-    @apply top-[58%];
-  }
-  #htmlLogo,
-  #cssLogo {
-    @apply top-[45%];
-  }
-  #gitLogo {
-    @apply top-[35%];
-  }
-  #sassLogo {
-    @apply top-[48%];
-  }
-  #awsLogo {
-    @apply top-[55%];
   }
   #space_ship {
     width: 70%;
@@ -221,8 +167,13 @@ footer {
 .name {
   font-size: 3rem;
   color: var(--text-color);
-  font-family: var(--font-sans-serif);
-  font-weight: bold;
+  font-family: var(--font-manrope);
+}
+
+.description {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-family: var(--font-manrope);
 }
 
 .bitmoji {
@@ -647,7 +598,7 @@ code {
 
 ::selection {
   color: black;
-  background: #29b6f6;
+  background: azure;
 }
 
 @keyframes blink {
@@ -706,7 +657,7 @@ svg {
 }
 
 .footer-name {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--text-color);
-  font-weight: bold;
+  font-family: var(--font-manrope);
 }
