@@ -1,6 +1,7 @@
 import { IconButton } from "@material-ui/core";
 import { useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaApple, FaMoon, FaSun } from "react-icons/fa";
+import SocialBar from "./SocialBar";
 
 const Intro = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -12,8 +13,13 @@ const Intro = () => {
   };
   return (
     <div className="main-content">
+      <nav className="w-screen h-[30px] bg-[#D9D9D9] absolute top-0 flex items-center gap-2 select-none px-4">
+        <FaApple color="gray" size={20} />
+        <span className="text-[#363636]">Portfolio</span>
+        <span className="text-[#363636] ml-auto">Manthan Mevada</span>
+      </nav>
       <IconButton
-        className="!m-4 !absolute !right-0 !top-0"
+        className="!m-4 !absolute !right-0 !top-10"
         onClick={handleDarkToggle}
       >
         {isDarkMode ? (
@@ -112,6 +118,12 @@ const Intro = () => {
           alt="AWS Logo"
           className="absolute right-[20%] bottom-[20%] w-[12%] transition-all duration-200"
         />
+      </div>
+      <div>
+        <span className="text-2xl" style={{ color: "var(--text-color)" }}>
+          Connect with me
+        </span>
+        <SocialBar />
       </div>
     </div>
   );

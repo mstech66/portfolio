@@ -46,6 +46,7 @@ class App extends Component {
             height: "100%",
             borderRadius: "0px",
             backgroundColor: "var(--bg-color)",
+            boxShadow: "unset"
           }}
         >
           <div className="App">

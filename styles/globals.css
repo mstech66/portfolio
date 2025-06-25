@@ -68,10 +68,6 @@ body {
   border-radius: 0px !important;
 }
 
-.App {
-  display: grid;
-}
-
 .hidden {
   display: none;
 }
