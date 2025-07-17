@@ -1,14 +1,5 @@
 export const projects = [
   {
-    title: "Portfolio",
-    url: "https://manthanmevada.vercel.app/",
-    giturl: "https://github.com/mstech66/portfolio",
-    descr: "This minimal portfolio built with Next",
-    longDescr:
-      "Designed and deployed a streamlined personal portfolio website built with Next.js, taking advantage of Vercel's capabilities for reliable and fast hosting.",
-    langUsed: ["nextjs", "react", "js", "tailwind", "vercel"],
-  },
-  {
     title: "Parchi",
     descr: "Personal Finance App to track spends",
     longDescr:
