@@ -81,7 +81,7 @@ footer {
   grid-template: repeat(1, 1fr) / repeat(2, 1fr);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1500px) {
   .name {
     font-size: 2rem !important;
   }
@@ -89,8 +89,28 @@ footer {
     font-size: 0.9rem !important;
   }
   .mac-div {
-    width: 500px !important;
-    height: 400px !important;
+    width: 650px !important;
+    height: 550px !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .name {
+    font-size: 2rem !important;
+  }
+  .description {
+    font-size: 0.9rem !important;
+  }
+  .mac-div {
+    width: 450px !important;
+    height: 350px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .mac-div {
+    width: 350px !important;
+    height: 250px !important;
   }
 }
 
@@ -100,10 +120,6 @@ footer {
   }
   .description {
     font-size: 0.9rem !important;
-  }
-  .mac-div {
-    width: 350px !important;
-    height: 250px !important;
   }
   .flex-grid {
     width: unset;
