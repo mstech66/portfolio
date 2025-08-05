@@ -50,13 +50,13 @@ const Intro = () => {
           src="/assets/images/epam1.png"
           id="epamLogo"
           alt="EPAM Systems Logo"
-          className="absolute right-[3%] top-[14%] w-[15%] transition-all duration-200 rotate-45"
+          className="absolute right-[36%] top-[40%] w-[25%] transition-all duration-200"
         />
         <img
           src="/assets/images/node.png"
           id="nodeLogo"
           alt="Node.JS Logo"
-          className="absolute right-[20%] top-[15%] w-[15%] transition-all duration-200"
+          className="absolute right-[22%] top-[18%] w-[13%] transition-all duration-200"
         />
         <img
           src="/assets/images/react.png"
@@ -98,13 +98,13 @@ const Intro = () => {
           src="/assets/images/sass.png"
           id="sassLogo"
           alt="Sass Logo"
-          className="absolute left-[22%] top-[45%] w-[13%] transition-all duration-200 -rotate-[15deg]"
+          className="absolute right-[5%] top-[7%] w-[13%] transition-all duration-200 -rotate-[15deg]"
         />
         <img
           src="/assets/images/git.png"
           id="gitLogo"
           alt="Github Logo"
-          className="absolute left-[35%] top-[20%] w-[10%] transition-all duration-200"
+          className="absolute left-[30%] top-[15%] w-[10%] transition-all duration-200"
         />
         <img
           src="/assets/images/figma.png"
@@ -116,10 +116,10 @@ const Intro = () => {
           src="/assets/images/AWS.png"
           id="awsLogo"
           alt="AWS Logo"
-          className="absolute right-[20%] bottom-[20%] w-[12%] transition-all duration-200"
+          className="absolute right-[43%] bottom-[10%] w-[12%] transition-all duration-200"
         />
       </div>
-      <div>
+      <div className="mb-[32px]">
         <span className="text-2xl" style={{ color: "var(--text-color)" }}>
           Connect with me
         </span>

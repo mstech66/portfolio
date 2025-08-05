@@ -4,6 +4,7 @@ import ProjectDialog from "../ProjectDialog";
 import {
   Card,
   CardActionArea,
+  CardActions,
   CardContent,
   Tooltip,
   Typography,
@@ -34,9 +35,8 @@ class ProjectCard extends Component {
 
     return (
       <>
-        <Card style={{ borderRadius: "12px", height: 140 }}>
-          <CardActionArea onClick={() => this.handleOpen()}>
-            <CardContent>
+        <Card className="flex-col h-[140] !rounded-[12px] p-[16px] cursor-pointer" onClick={() => this.handleOpen()}>
+            <CardContent className="!p-[0]">
               <Typography
                 gutterBottom
                 variant="h5"
@@ -68,10 +68,10 @@ class ProjectCard extends Component {
               >
                 {this.props.descr}
               </Typography>
-              <CodeBar values={this.props.langUsed} />
-              <img />
             </CardContent>
-          </CardActionArea>
+            <CardActions className="!p-[0]">
+              <CodeBar values={this.props.langUsed} />
+            </CardActions>
         </Card>
         {this.state.open && (
           <ProjectDialog

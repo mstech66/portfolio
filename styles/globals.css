@@ -12,8 +12,7 @@
   --white: #f5f5f5;
   --green: #3ddc84;
   --violet: #0066cc;
-  --card-bg: gray;
-  --card-bg-light: #eaeaea;
+  --card-bg: #27292d;
   --card-primary-text: rgba(221, 221, 221, 0.9);
   --card-secondary-text: rgba(221, 221, 221, 0.67);
   --card-disabled-text: rgba(221, 221, 221, 0.38);
@@ -32,6 +31,7 @@
 [data-theme="dark"] {
   --bg-color: #1f2025;
   --text-color: #fafafa;
+  --card-bg: #27292d;
 }
 
 /* General CSS Styles */
@@ -81,7 +81,7 @@ footer {
   grid-template: repeat(1, 1fr) / repeat(2, 1fr);
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1550px) {
   .name {
     font-size: 2rem !important;
   }
@@ -193,6 +193,7 @@ footer {
   font-size: 3rem;
   color: var(--text-color);
   font-family: var(--font-manrope);
+  margin-top: 32px;
 }
 
 .description {
@@ -351,7 +352,7 @@ div.mac-div img:hover {
   background-repeat: no-repeat;
   /* white-space: nowrap; */
   user-select: none;
-  background-color: #27292d;
+  background-color: var(--card-bg);
 }
 
 .github_link {

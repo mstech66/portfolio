@@ -9,7 +9,7 @@ const Footer = () => {
         {`
           .waves {
             position: relative;
-            margin-top: 190px;
+            margin-top: 250px;
           }
 
           .waveOne {
