@@ -7,6 +7,8 @@ function WallpaperComponent(props) {
   const [open, setOpen] = useState(false);
   const title = "Wallpapers";
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const { data, error } = useSWR("/api/storage?object=wallpaper", fetcher);
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -15,8 +17,7 @@ function WallpaperComponent(props) {
     setOpen(true);
   };
 
-  const child = () => {
-    const { data, error } = useSWR("/api/storage?object=wallpaper", fetcher);
+  const renderWallpapers = () => {
     if (error) return <div>Failed to load</div>;
     if (!data)
       return (
@@ -44,7 +45,7 @@ function WallpaperComponent(props) {
     });
   };
 
-  const mainContent = <div className="wallpaperGrid">{child()}</div>;
+  const mainContent = <div className="wallpaperGrid">{renderWallpapers()}</div>;
 
   return (
     <>

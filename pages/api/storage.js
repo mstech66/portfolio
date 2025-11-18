@@ -3,6 +3,7 @@ import "firebase/storage";
 import config from "../../data/config.js";
 
 if (!firebase.apps.length) {
+  console.log("Firebase config:", config);
   firebase.initializeApp(config);
 }
 
