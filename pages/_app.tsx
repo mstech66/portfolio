@@ -1,21 +1,23 @@
-import { Analytics } from "@vercel/analytics/react";
-import "../styles/globals.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
 import Head from "next/head";
+import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "../styles/fonts.css";
+import "../styles/globals.css";
+
 config.autoAddCss = false;
 
-export const metadata = {
+const metadata = {
   title: "Manthan",
   description: "Manthan Mevada Portfolio Website",
 };
 
-export default function RootLayout({ Component, pageProps }) {
-  if (typeof window !== "undefined") {
-    if (!document.documentElement.getAttribute("data-theme")) {
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
+export default function App({ Component, pageProps }: AppProps) {
+  if (typeof window !== "undefined" && !document.documentElement.dataset.theme) {
+    document.documentElement.dataset.theme = "dark";
   }
+
   return (
     <>
       <Head>

@@ -1,8 +1,8 @@
-import SocialBar from "./SocialBar";
 import wave1Img from "../public/assets/images/01.png";
 import wave2Img from "../public/assets/images/02.png";
+import SocialBar from "./SocialBar";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <>
       <style jsx>
@@ -68,6 +68,4 @@ const Footer = () => {
       </div>
     </>
   );
-};
-
-export default Footer;
+}

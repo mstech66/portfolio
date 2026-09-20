@@ -1,4 +1,6 @@
-const data = {
+import type { FirebaseConfig } from "./types";
+
+const data: FirebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_APIKEY,
   authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
   databaseURL: process.env.NEXT_PUBLIC_DATABASEURL,
@@ -8,4 +10,5 @@ const data = {
   appId: process.env.NEXT_PUBLIC_APPID,
   figmaToken: process.env.NEXT_PUBLIC_FIGMA_TOKEN,
 };
+
 export default data;

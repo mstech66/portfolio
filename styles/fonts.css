@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Londrina+Outline&family=Manrope:wght@400;500;700&family=Montserrat&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+:root {
+  --font-primary: "Manrope", "Source Sans Pro", sans-serif;
+  --font-sans-serif: "Source Sans Pro", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-dmserif: "DM Serif Display", serif;
+  --font-display: "Londrina Outline", cursive;
+}
