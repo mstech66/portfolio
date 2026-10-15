@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ResumeResponse } from "@/data/types";
+import { logAnalyticsEvent } from "@/lib/firebase";
 
 interface ResumeComponentProps {
   classList?: string;
@@ -20,6 +21,7 @@ export default function ResumeComponent({ classList }: ResumeComponentProps) {
       });
       const { url } = (await response.json()) as ResumeResponse;
       if (url) {
+        logAnalyticsEvent("view_resume", { file_name: "CV.pdf" });
         window.open(url, "_blank");
       }
     } catch {
