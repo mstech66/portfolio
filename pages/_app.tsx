@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
+import Script from "next/script";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -18,6 +19,7 @@ const metadata = {
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+  const measurementId = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
 
   if (typeof window !== "undefined" && !document.documentElement.dataset.theme) {
     document.documentElement.dataset.theme = "dark";
@@ -49,6 +51,31 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content={metadata.description} />
         <link rel="shortcut icon" href="favicon.ico" />
       </Head>
+
+      {/* Google tag (gtag.js) for Google / Firebase Analytics */}
+      {measurementId && (
+        <>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+          />
+          <Script
+            id="google-analytics-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${measurementId}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+          />
+        </>
+      )}
+
       <Component {...pageProps} />
     </>
   );
