@@ -9,6 +9,8 @@ import { initAnalytics, logAnalyticsEvent } from "@/lib/firebase";
 import "../styles/fonts.css";
 import "../styles/globals.css";
 import "../styles/downloads.css";
+import "../styles/terminal.css";
+import "../styles/footer.css";
 
 config.autoAddCss = false;
 

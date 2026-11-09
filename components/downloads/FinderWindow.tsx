@@ -484,7 +484,7 @@ function ResumeView({ state }: { state: ReturnType<typeof useResumeUrl> }) {
       <div className="dl-paper" aria-hidden="true">
         <div>
           <div className="dl-paper-name">Manthan Mevada</div>
-          <div className="dl-paper-role">Frontend Developer</div>
+          <div className="dl-paper-role">Software Engineer</div>
         </div>
         <div className="dl-paper-lines">
           <i className="is-head" style={{ width: "40%" }} />

@@ -15,10 +15,12 @@ export default function ProjectDialog({
   langUsed,
   longDescr,
   descr,
+  category,
   open,
   title,
   url,
 }: ProjectDialogProps) {
+  const projectClass = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   const handleLaunch = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (url) {
@@ -47,43 +49,34 @@ export default function ProjectDialog({
       aria-labelledby="project-dialog-title"
       disableScrollLock
     >
-      <div className="shared-modal-container">
-        {/* Close Button at Top Right */}
-        <button
-          type="button"
-          className="shared-modal-close-btn"
-          onClick={handleClose}
-          aria-label="Close dialog"
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
+      <div className={`shared-modal-container project-${projectClass}`}>
+        <div className="shared-modal-header">
+          <div className="shared-modal-controls" role="group" aria-label="Window controls">
+            <button
+              type="button"
+              className="shared-modal-light shared-modal-light-close"
+              onClick={handleClose}
+              aria-label="Close dialog"
+              title="Close"
+            />
+            <span className="shared-modal-light shared-modal-light-minimize" aria-hidden="true" />
+            <span className="shared-modal-light shared-modal-light-maximize" aria-hidden="true" />
+          </div>
+          <div className="shared-modal-heading">
+            {category && <span className="shared-modal-category">{category}</span>}
+            <h2 id="project-dialog-title" className="shared-modal-title">{title}</h2>
+            {descr && <p className="shared-modal-subtitle">{descr}</p>}
+          </div>
+        </div>
 
-        {/* Title */}
-        <h2 id="project-dialog-title" className="shared-modal-title">{title}</h2>
+        <div className="shared-modal-body">
+          <p className="shared-modal-descr">{longDescr || descr}</p>
+        </div>
 
-        {/* Subtitle */}
-        {descr && <div className="shared-modal-subtitle">{descr}</div>}
-
-        {/* Description Body */}
-        <p className="shared-modal-descr">{longDescr || descr}</p>
-
-        {/* Bottom Row (Identical to Card) */}
-        <div className="shared-footer-row">
+        <div className="shared-modal-footer">
           <TechCapsule values={langUsed} />
 
-          <div className="shared-actions">
+          <div className="shared-actions shared-modal-actions">
             <button
               type="button"
               className="shared-launch-btn"

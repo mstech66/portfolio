@@ -35,6 +35,34 @@ export interface Project {
   compatibility?: string;
 }
 
+export interface PortfolioLink {
+  label: string;
+  href: string;
+  display: string;
+}
+
+export interface PortfolioData {
+  name: string;
+  role: string;
+  intro: string;
+  bio: string[];
+  resumeUrl: string;
+  siteUrl: string;
+  links: {
+    email: PortfolioLink;
+    github: PortfolioLink;
+    linkedin: PortfolioLink;
+    x: PortfolioLink;
+  };
+  skills: { category: string; items: string }[];
+  experience: {
+    title: string;
+    location: string;
+    duration: string;
+    summary: string[];
+  };
+}
+
 export interface AppFile {
   fileName: string;
   fileUrl: string;

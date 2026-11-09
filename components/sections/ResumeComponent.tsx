@@ -73,7 +73,7 @@ export default function ResumeComponent({ classList }: ResumeComponentProps) {
             <div className="resume-sheet-header">
               <div className="resume-sheet-identity">
                 <span className="resume-sheet-name">Manthan Mevada</span>
-                <span className="resume-sheet-role">Frontend Developer</span>
+                <span className="resume-sheet-role">Software Engineer</span>
               </div>
               <div className="resume-pdf-pill">
                 <span className="resume-pdf-tag">

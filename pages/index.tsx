@@ -33,7 +33,7 @@ export default function HomePage() {
           boxShadow: "unset",
         }}
       >
-        <div className="App">
+        <div className="App" id="top">
           <Intro />
           <Downloadables />
           <SkillsContainer />

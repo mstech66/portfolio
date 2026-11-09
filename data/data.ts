@@ -1,4 +1,4 @@
-import type { Project } from "./types";
+import type { PortfolioData, Project } from "./types";
 
 export const projects: Project[] = [
   {
@@ -12,15 +12,6 @@ export const projects: Project[] = [
     compatibility: "Android, iOS, Figma",
   },
   {
-    title: "Smart Projector",
-    descr: "Raspberry Pi based Smart Class Solution",
-    longDescr:
-      "Smart Projector is an all-in-one device for smart classes. Smart Projector is able to answer any question right away with Google Assistant, it doesn’t require a keyboard/mouse so you can touch the projection to interact with the digital pen by which you can draw and doodle on the surface.",
-    langUsed: ["raspberrypi", "python", "node", "js", "firebase", "css"],
-    category: "IoT & Hardware",
-    compatibility: "Raspberry Pi, Touch Surface, Assistant",
-  },
-  {
     title: "Notify",
     giturl: "https://github.com/mstech66/notify-android",
     descr: "Digital Noticeboard in palm of your hands",
@@ -31,38 +22,6 @@ export const projects: Project[] = [
     compatibility: "Android, FCM Cloud, Web Dashboard",
   },
   {
-    title: "Crack Your Way",
-    url: "http://cyw-srpec.herokuapp.com/",
-    giturl: "https://github.com/mstech66/cyw",
-    descr: "A QR Code Based Trivia Game",
-    longDescr:
-      "Crack Your Way is a fun trivia game with a bit complexity of QR-codes. Solve the questions and scan the QR codes to move further.",
-    langUsed: ["node", "js", "css", "mongo"],
-    category: "Web",
-    compatibility: "Web, Mobile Safari & Chrome",
-  },
-  {
-    title: "Matcher",
-    url: "http://matcher.herokuapp.com/",
-    giturl: "https://github.com/mstech66/matcher",
-    descr: "Simple Combined DNA Indexing System",
-    longDescr:
-      "Inspired by CODIS (FBI), I wanted to try out comparing two different csv files which contains a mixture and a sample dna data for the possible suspects and trying to match the most matched possible suspect. I built the web interface in Angular 7 with a very minimal design in mind.",
-    langUsed: ["angular", "node", "js", "css", "mongo"],
-    category: "Web",
-    compatibility: "Web, Modern Browsers, CSV Engine",
-  },
-  {
-    title: "InstaSaidSo!",
-    giturl: "https://github.com/mstech66/instasaidso",
-    descr: "Quotes App inspired by Instagram",
-    longDescr:
-      "Inspired by Instagram's minimalistic and popular design I wanted to try it out with css but then thought about creating a quotes app which basically looks like an Instgram Clone :P Wanted to build it for desktop but electronjs didn't help me much. Ended up creating a fully functioning website with a backend quotes api with jwt authentication leveraging the data in MongoDB.",
-    langUsed: ["angular", "js", "css", "mongo"],
-    category: "Web",
-    compatibility: "Web, Mobile Responsive, REST API",
-  },
-  {
     title: "Breathe",
     giturl: "https://github.com/mstech66/breathe",
     descr: "Simple Breathing Reminders App",
@@ -71,17 +30,6 @@ export const projects: Project[] = [
     langUsed: ["UWP", "css"],
     category: "AI & Tools",
     compatibility: "Windows 10, Windows 11 (UWP)",
-  },
-  {
-    title: "Sticker Maker",
-    url: "https://mstech66.github.io/stickermaker/",
-    giturl: "https://github.com/mstech66/stickermaker",
-    descr: "Sticker Maker App built with Flutter 💙",
-    longDescr:
-      "Developed a Flutter-based StickerMaker app for Android to offer users an ad-free experience. The app's user interface was meticulously designed using Figma",
-    langUsed: ["flutter", "figma", "android"],
-    category: "Mobile",
-    compatibility: "Android, WhatsApp Stickers API",
   },
   {
     title: "Notes App",
@@ -115,3 +63,59 @@ export const projects: Project[] = [
     compatibility: "Web, Mobile Checkout, Stripe, Sheets",
   }
 ];
+
+export const portfolio: PortfolioData = {
+  name: "Manthan Mevada",
+  role: "React-focused frontend and full stack developer",
+  intro:
+    "React-focused frontend and full stack developer building polished web experiences with React, Next.js and TypeScript. My toolkit also includes Node.js, Express and databases.",
+  bio: [
+    "Software engineer with a love for building things that look good and work well. <3",
+    "I work across software engineering and design, mostly with React, Next.js, TypeScript, JavaScript and Flutter.",
+    "Lately I've been exploring AI-powered development, automation, developer tooling, and ways to make engineering smarter and more fun.",
+    "I build things in my free time too: some useful, some experimental, some completely unnecessary. All of them are fun. :D",
+    "I love books, video games, design, chai, and turning random ideas into projects.",
+  ],
+  resumeUrl: "/resume.pdf",
+  siteUrl: "https://manthanmevada.vercel.app",
+  links: {
+    email: {
+      label: "Email",
+      href: "mailto:manthanmevada@outlook.com",
+      display: "manthanmevada@outlook.com",
+    },
+    github: {
+      label: "GitHub",
+      href: "https://github.com/mstech66",
+      display: "github.com/mstech66",
+    },
+    linkedin: {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/manthanmevada/",
+      display: "linkedin.com/in/manthanmevada",
+    },
+    x: {
+      label: "X",
+      href: "https://twitter.com/Manthan_Mevada",
+      display: "twitter.com/Manthan_Mevada",
+    },
+  },
+  skills: [
+    { category: "Frontend", items: "React, Next.js, TypeScript, JavaScript, HTML/CSS, Sass" },
+    { category: "Backend", items: "Node.js, Express" },
+    { category: "Data / Cloud", items: "MongoDB, MySQL, Firebase, AWS" },
+    { category: "Quality", items: "Katalon Studio, Java, Selenium, Playwright" },
+    { category: "Design", items: "UI/UX, Figma, visual design, illustration" },
+  ],
+  experience: {
+    title: "Software Engineer - EPAM",
+    location: "Remote",
+    duration: "About 7 years in software engineering",
+    summary: [
+      "Collaborated with cross-functional teams to support software delivery",
+      "Worked from product requirements toward reliable, release-ready outcomes",
+      "Contributed to maintainable workflows and continuous improvement",
+      "Building frontend projects with React, Next.js and TypeScript",
+    ],
+  },
+};

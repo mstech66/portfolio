@@ -65,7 +65,7 @@ export default function Downloadables() {
           contents={
             <span className="dl-peek-paper">
               <span className="dl-peek-paper-name">Manthan Mevada</span>
-              <span className="dl-peek-paper-role">Frontend Developer</span>
+              <span className="dl-peek-paper-role">Software Engineer</span>
               <i style={{ width: "62%" }} />
               <i style={{ width: "92%" }} />
               <i style={{ width: "80%" }} />

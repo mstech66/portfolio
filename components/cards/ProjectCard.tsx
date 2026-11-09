@@ -6,6 +6,10 @@ import type { Project } from "@/data/types";
 
 export default function ProjectCard(project: Project) {
   const [open, setOpen] = useState(false);
+  const categoryClass = project.category
+    ? project.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+    : "general";
+  const projectClass = project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
   const handleLaunchClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -32,7 +36,7 @@ export default function ProjectCard(project: Project) {
   return (
     <>
       <div
-        className="shared-project-card"
+        className={`shared-project-card project-card-${categoryClass} project-${projectClass}`}
         onClick={() => setOpen(true)}
         role="button"
         tabIndex={0}
@@ -43,16 +47,24 @@ export default function ProjectCard(project: Project) {
           }
         }}
       >
-        <div className="shared-card-content">
-          <h3 className="shared-card-title">{project.title}</h3>
+        <div className="shared-card-hero">
+          <div className="shared-card-heading">
+            {projectClass === "parchi" ? (
+              <img
+                className="shared-card-app-icon"
+                src="/assets/previews/app_parchi.png"
+                alt=""
+              />
+            ) : (
+              <span className="shared-card-app-icon" aria-hidden="true">
+                {project.title.charAt(0)}
+              </span>
+            )}
+            <h3 className="shared-card-title">{project.title}</h3>
+          </div>
           {project.descr && (
             <p className="shared-card-subtitle">{project.descr}</p>
           )}
-        </div>
-
-        <div className="shared-footer-row">
-          <TechCapsule values={project.langUsed} maxIcons={3} />
-
           <div className="shared-actions">
             <button
               type="button"
@@ -70,6 +82,14 @@ export default function ProjectCard(project: Project) {
               <ExternalArrowIcon />
             </button>
           </div>
+        </div>
+
+        <div className="shared-footer-row">
+          <div className="shared-card-compatibility">
+            <span>Compatibility</span>
+            <strong>{project.compatibility || project.category || "Personal project"}</strong>
+          </div>
+          <TechCapsule values={project.langUsed} maxIcons={3} />
         </div>
       </div>
 
