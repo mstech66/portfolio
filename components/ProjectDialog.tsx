@@ -12,10 +12,12 @@ interface ProjectDialogProps extends Project {
 export default function ProjectDialog({
   giturl,
   handleClose,
+  cardColor,
+  cardTextColor,
   langUsed,
   longDescr,
   descr,
-  category,
+  categories,
   open,
   title,
   url,
@@ -25,8 +27,6 @@ export default function ProjectDialog({
     e.stopPropagation();
     if (url) {
       window.open(url, "_blank");
-    } else if (giturl) {
-      window.open(giturl, "_blank");
     }
   };
 
@@ -50,7 +50,10 @@ export default function ProjectDialog({
       disableScrollLock
     >
       <div className={`shared-modal-container project-${projectClass}`}>
-        <div className="shared-modal-header">
+        <div
+          className="shared-modal-header"
+          style={{ backgroundColor: cardColor, color: cardTextColor }}
+        >
           <div className="shared-modal-controls" role="group" aria-label="Window controls">
             <button
               type="button"
@@ -63,7 +66,9 @@ export default function ProjectDialog({
             <span className="shared-modal-light shared-modal-light-maximize" aria-hidden="true" />
           </div>
           <div className="shared-modal-heading">
-            {category && <span className="shared-modal-category">{category}</span>}
+            {categories?.length ? (
+              <span className="shared-modal-category">{categories.join(" · ")}</span>
+            ) : null}
             <h2 id="project-dialog-title" className="shared-modal-title">{title}</h2>
             {descr && <p className="shared-modal-subtitle">{descr}</p>}
           </div>
@@ -81,6 +86,7 @@ export default function ProjectDialog({
               type="button"
               className="shared-launch-btn"
               onClick={handleLaunch}
+              disabled={!url}
             >
               Launch
             </button>

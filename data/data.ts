@@ -3,65 +3,65 @@ import type { PortfolioData, Project } from "./types";
 export const projects: Project[] = [
   {
     title: "Parchi",
+    cardColor: "#efc72e",
+    cardTextColor: "#15202b",
     descr: "A Personal Finance App to Track Your Spends",
     longDescr:
-      "I designed and developed a personal finance app using Flutter and Figma, initially as a learning exercise. Positive feedback from peers motivated further enhancement, leading to deeper exploration of Flutter's state management and animation capabilities. This experience solidified my preference for Flutter in creating engaging mobile experiences",
+      "I designed and built a personal finance app with Flutter and Figma as a learning project. Encouraged by positive feedback from peers, I continued refining it while exploring Flutter's state management and animation capabilities. The experience strengthened my passion for using Flutter to create engaging mobile experiences.",
     langUsed: ["flutter", "figma"],
     giturl: "https://github.com/mstech66",
-    category: "Mobile",
+    categories: ["Mobile"],
     compatibility: "Android, iOS, Figma",
   },
   {
     title: "Notify",
+    cardColor: "#c9ddf5",
+    cardTextColor: "#15202b",
     giturl: "https://github.com/mstech66/notify-android",
     descr: "Digital Noticeboard in palm of your hands",
     longDescr:
-      "Notify is an app which simplifies every day Noticeboards by digitizing them. It uses Firebase’s Topic Messaging Feature to sort notices to only for those to whom they are useful. Notify also includes a Dashboard for Administrator to easily send notices to students.",
+      "Notify is an app that digitizes everyday noticeboards, making it easier to share updates with the right audience. It uses Firebase Cloud Messaging topic-based notifications to deliver notices only to relevant recipients and includes an admin dashboard for sending announcements to students.",
     langUsed: ["android", "kotlin", "firebase", "node", "js", "css"],
-    category: "Mobile",
+    categories: ["Mobile"],
     compatibility: "Android, FCM Cloud, Web Dashboard",
   },
   {
     title: "Breathe",
+    cardColor: "#cce8df",
+    cardTextColor: "#15202b",
     giturl: "https://github.com/mstech66/breathe",
+    url: "https://apps.microsoft.com/detail/9P9LLQVRHLDJ?hl=en-us&gl=IN&ocid=pdpshare",
     descr: "Simple Breathing Reminders App",
     longDescr:
-      "Explored various desktop frameworks with JavaScript (Electron and React Native for Windows) before developing a functional UWP application for Windows. Incorporated custom breathing animations, demonstrating practical application development and UI design skills.",
-    langUsed: ["UWP", "css"],
-    category: "AI & Tools",
-    compatibility: "Windows 10, Windows 11 (UWP)",
-  },
-  {
-    title: "Notes App",
-    url: "https://notes-mstech66.vercel.app/",
-    giturl: "https://github.com/mstech66/notes",
-    descr: "Notes App made with React",
-    longDescr:
-      "A simple notes application made with Material UI and inspired by Pinterest and Google Keep's masonry layout",
-    langUsed: ["react", "js", "css", "vercel"],
-    category: "Web",
-    compatibility: "Web, Vercel, Responsive Layout",
-  },
-  {
-    title: "AI Powered Todo App",
-    giturl: "https://github.com/mstech66/todo",
-    descr: "Not your normal todo app",
-    longDescr:
-      "Todo list app with AI built in to help you do better tasks. It's built in NextJS with Gemini 2.5 Flash API. Deploying soon",
-    langUsed: ["nextjs", "react", "js", "tailwind", "gemini"],
-    category: "AI & Tools",
-    compatibility: "Web, Next.js, Gemini AI 2.5",
+      "A calm work–rest rhythm for people who work from home. Focus sessions, real breaks, and a one-minute guided breath whenever you need it.",
+    langUsed: ["js", "rust", "css"],
+    categories: ["AI & Tools", "Desktop"],
+    compatibility: "Windows, macOS",
   },
   {
     title: "Restro App",
+    cardColor: "#f3d0c3",
+    cardTextColor: "#15202b",
     url: "https://restro-form.vercel.app/",
     descr: "Lunch ordering website for St. Joseph's",
     longDescr:
-      "As part of my freelancing, I developed a website in NextJS which lets students place lunch orders safely. It uses Stripe for processing payments in Canada and as requested it uses Google Sheets API to store the information",
+      "As a freelance project, I built a Next.js website that lets students place lunch orders securely. It uses Stripe for payments in Canada, and, as requested, stores order information in Google Sheets.",
     langUsed: ["nextjs", "react", "js", "tailwind", "sheets", "stripe", "vercel"],
-    category: "Web",
+    categories: ["Web"],
     compatibility: "Web, Mobile Checkout, Stripe, Sheets",
-  }
+  },
+  {
+    title: "mori.",
+    cardColor: "#14221c",
+    cardTextColor: "#e2f4ef",
+    giturl: "https://github.com/mstech66/todo",
+    descr: "A home for your thoughts",
+    longDescr:
+      "mori. is a simple, minimalistic and personal memory workspace where you can jot down your thoughts and ideas with a built in agent that helps you organize your thoughts and ideas. It is built with Next.js, React, Tailwind CSS.",
+    langUsed: ["nextjs", "react", "js", "tailwind", "gemini"],
+    categories: ["AI & Tools", "Web"],
+    compatibility: "Web, Next.js, Gemini",
+  },
 ];
 
 export const portfolio: PortfolioData = {

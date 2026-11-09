@@ -422,30 +422,6 @@ html {
   background: #f4f5f7;
 }
 
-.project-parchi .shared-card-hero {
-  background: #ffd834;
-}
-
-.project-notify .shared-card-hero {
-  background: #dcecff;
-}
-
-.project-breathe .shared-card-hero {
-  background: #e2f4ef;
-}
-
-.project-notes-app .shared-card-hero {
-  background: #f0eaff;
-}
-
-.project-ai-powered-todo-app .shared-card-hero {
-  background: #e5e9ff;
-}
-
-.project-restro-app .shared-card-hero {
-  background: #ffe5dc;
-}
-
 .shared-card-heading {
   display: flex;
   align-items: center;
@@ -545,10 +521,11 @@ html {
 }
 
 .shared-actions {
+  --shared-action-height: clamp(30px, 9.5cqi, 32px);
   display: inline-flex;
   align-items: stretch;
   gap: clamp(6px, 2.5cqi, 8px);
-  height: clamp(27px, 9cqi, 29px);
+  height: var(--shared-action-height);
   margin-top: clamp(8px, 3.6cqi, 12px);
   flex-shrink: 0;
 }
@@ -557,11 +534,11 @@ html {
   background-color: rgba(20, 24, 29, 0.9);
   color: #ffffff;
   border: 1px solid transparent;
-  min-width: clamp(60px, 22cqi, 72px);
+  min-width: clamp(64px, 23cqi, 76px);
   border-radius: 7px;
-  height: clamp(27px, 9cqi, 29px);
-  padding: 0 clamp(8px, 3.8cqi, 12px);
-  font-size: clamp(10px, 3.8cqi, 12px);
+  height: var(--shared-action-height);
+  padding: 0 clamp(10px, 4cqi, 14px);
+  font-size: clamp(11px, 4cqi, 13px);
   font-weight: 600;
   letter-spacing: -0.01em;
   cursor: pointer;
@@ -575,26 +552,31 @@ html {
   box-sizing: border-box;
 }
 
-.shared-launch-btn:hover {
+.shared-launch-btn:not(:disabled):hover {
   background-color: rgba(20, 24, 29, 1);
 }
 
+.shared-launch-btn:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
 .shared-code-link {
-  min-width: clamp(80px, 29cqi, 92px);
+  min-width: clamp(84px, 30cqi, 96px);
   box-sizing: border-box;
   color: #20242b;
-  font-size: clamp(10px, 3.8cqi, 12px);
+  font-size: clamp(11px, 4cqi, 13px);
   font-weight: 600;
   letter-spacing: 0;
   background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(25, 35, 45, 0.08);
+  border: 1px solid transparent;
   border-radius: 7px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: clamp(4px, 2cqi, 6px);
-  height: clamp(27px, 9cqi, 29px);
-  padding: 0 clamp(6px, 2.8cqi, 8px);
+  gap: clamp(5px, 2.2cqi, 7px);
+  height: var(--shared-action-height);
+  padding: 0 clamp(8px, 3cqi, 10px);
   text-decoration: none !important;
   white-space: nowrap;
   flex-shrink: 0;
@@ -604,11 +586,14 @@ html {
 
 .shared-actions > .shared-launch-btn,
 .shared-actions > .shared-code-link {
-  height: clamp(27px, 9cqi, 29px);
-  min-height: clamp(27px, 9cqi, 29px);
+  appearance: none;
+  height: var(--shared-action-height);
+  min-height: var(--shared-action-height);
+  max-height: var(--shared-action-height);
   box-sizing: border-box;
   padding-block: 0;
   line-height: 1;
+  align-self: center;
 }
 
 .shared-code-arrow {
@@ -621,7 +606,7 @@ html {
 
 .shared-code-link:hover {
   background-color: #ffffff;
-  border-color: rgba(25, 35, 45, 0.16);
+  border-color: transparent;
   text-decoration: none !important;
   color: #20242b;
 }
@@ -721,6 +706,7 @@ html {
     display: flex;
     width: 100%;
     height: auto;
+    --shared-action-height: 36px;
     margin-top: 16px;
     gap: 10px;
     justify-content: flex-start;
@@ -729,8 +715,8 @@ html {
   .shared-launch-btn,
   .shared-code-link {
     flex: 1 1 0;
-    height: 34px;
-    min-height: 34px;
+    height: 36px;
+    min-height: 36px;
     font-size: 13px;
     border-radius: 6px;
     padding: 0 14px;
@@ -789,13 +775,6 @@ html {
   background: #eef1f5;
 }
 
-.project-parchi .shared-modal-header { background: #ffd834; }
-.project-notify .shared-modal-header { background: #dcecff; }
-.project-breathe .shared-modal-header { background: #e2f4ef; }
-.project-notes-app .shared-modal-header { background: #f0eaff; }
-.project-ai-powered-todo-app .shared-modal-header { background: #e5e9ff; }
-.project-restro-app .shared-modal-header { background: #ffe5dc; }
-
 .shared-modal-heading {
   min-width: 0;
 }
@@ -834,7 +813,8 @@ html {
 .shared-modal-category {
   display: block;
   margin-bottom: 10px;
-  color: rgba(25, 33, 43, 0.66);
+  color: inherit;
+  opacity: 0.72;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -1618,11 +1598,6 @@ html {
   cursor: default;
   user-select: none;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
-}
-
-.section-label.jeans-red-tab:hover {
-  transform: scale(1.04);
-  box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* Clear, highly readable white text */

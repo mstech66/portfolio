@@ -6,8 +6,10 @@ import type { Project } from "@/data/types";
 
 export default function ProjectCard(project: Project) {
   const [open, setOpen] = useState(false);
-  const categoryClass = project.category
-    ? project.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+  const categoryClasses = project.categories?.length
+    ? project.categories
+        .map((category) => category.toLowerCase().replace(/[^a-z0-9]+/g, "-"))
+        .join(" ")
     : "general";
   const projectClass = project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
@@ -15,10 +17,6 @@ export default function ProjectCard(project: Project) {
     e.stopPropagation();
     if (project.url) {
       window.open(project.url, "_blank");
-    } else if (project.giturl) {
-      window.open(project.giturl, "_blank");
-    } else {
-      setOpen(true);
     }
   };
 
@@ -36,7 +34,10 @@ export default function ProjectCard(project: Project) {
   return (
     <>
       <div
-        className={`shared-project-card project-card-${categoryClass} project-${projectClass}`}
+        className={`shared-project-card ${categoryClasses
+          .split(" ")
+          .map((categoryClass) => `project-card-${categoryClass}`)
+          .join(" ")} project-${projectClass}`}
         onClick={() => setOpen(true)}
         role="button"
         tabIndex={0}
@@ -47,7 +48,10 @@ export default function ProjectCard(project: Project) {
           }
         }}
       >
-        <div className="shared-card-hero">
+        <div
+          className="shared-card-hero"
+          style={{ backgroundColor: project.cardColor, color: project.cardTextColor }}
+        >
           <div className="shared-card-heading">
             {projectClass === "parchi" ? (
               <img
@@ -70,6 +74,7 @@ export default function ProjectCard(project: Project) {
               type="button"
               className="shared-launch-btn"
               onClick={handleLaunchClick}
+              disabled={!project.url}
             >
               Launch
             </button>
@@ -87,7 +92,7 @@ export default function ProjectCard(project: Project) {
         <div className="shared-footer-row">
           <div className="shared-card-compatibility">
             <span>Compatibility</span>
-            <strong>{project.compatibility || project.category || "Personal project"}</strong>
+            <strong>{project.compatibility || project.categories?.join(", ") || "Personal project"}</strong>
           </div>
           <TechCapsule values={project.langUsed} maxIcons={3} />
         </div>

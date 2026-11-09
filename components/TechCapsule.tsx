@@ -21,6 +21,7 @@ import {
   FaPython,
   FaRaspberryPi,
   FaReact,
+  FaRust,
   FaStripeS,
   FaWindows,
 } from "react-icons/fa";
@@ -72,6 +73,7 @@ const brandColors: Record<Technology, string> = {
   node: "#339933",
   python: "#3776AB",
   react: "#61DAFB",
+  rust: "#A52A2A",
   raspberrypi: "#C51A4A",
   UWP: "#0078D6",
   nextjs: "var(--tech-monochrome, #ffffff)",
@@ -98,6 +100,7 @@ const languages: Record<Technology, any> = {
   python: FaPython,
   react: FaReact,
   raspberrypi: FaRaspberryPi,
+  rust: FaRust,
   UWP: FaWindows,
   nextjs: SiNextdotjs,
   tailwind: SiTailwindcss,

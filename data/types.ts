@@ -14,6 +14,7 @@ export type Technology =
   | "nextjs"
   | "node"
   | "python"
+  | "rust"
   | "raspberrypi"
   | "react"
   | "sheets"
@@ -22,16 +23,18 @@ export type Technology =
   | "UWP"
   | "vercel";
 
-export type ProjectCategory = "All" | "Web" | "Mobile" | "AI & Tools" | "IoT & Hardware";
+export type ProjectCategory = "All" | "Web" | "Desktop" | "Mobile" | "AI & Tools" | "IoT & Hardware";
 
 export interface Project {
   title: string;
+  cardColor: string;
+  cardTextColor: string;
   descr: string;
   longDescr: string;
   langUsed: Technology[];
   url?: string;
   giturl?: string;
-  category?: ProjectCategory;
+  categories?: ProjectCategory[];
   compatibility?: string;
 }
 
